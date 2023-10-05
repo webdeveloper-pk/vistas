@@ -4,6 +4,7 @@ import logo from "../../assets/images/logo.png";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  // eslint-disable-next-line
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -31,14 +32,15 @@ const Navbar = () => {
   return (
     <div className="">
       <header
-        className={`w-full text-white px-[15px] md:px-[40px] lg:px-[40px] xl:px-[50px] 2xl:px-[60px] mx-auto border-b border-light-gray ${
+        className={`w-full text-white px-[15px] md:px-[40px] lg:px-[40px] xl:px-[50px] 2xl:px-[60px] mx-auto border-b border-light-gray  ${
           navbar ? "mobile-header" : ""
         }`}
+        // style={{ zIndex: 100, position: "relative" }}
       >
         <div className="mx-auto flex flex-col lg:flex-row justify-between homepage-container">
           <div className="flex flex-col lg:flex-row justify-center items-center gap-x-[30px] 2xl:gap-x-[50px]">
             <div className="w-full flex flex-row justify-between items-center gap-x-4">
-              <div>
+              <div data-aos="fade-right" data-aos-duration="1500">
                 <a href="/">
                   <img
                     src={logo}
@@ -129,7 +131,11 @@ const Navbar = () => {
                     </li>
 
                   </ul> */}
-                  <div className="block lg:hidden">
+                  <div
+                    className="block lg:hidden"
+                    data-aos="fade-left"
+                    data-aos-duration="1500"
+                  >
                     {isLoggedIn ? (
                       <div className="flex flex-col lg:flex-row items-center gap-[30px]">
                         <Link to="/login">
@@ -157,7 +163,11 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="hidden lg:block lg:flex lg:flex-row items-center justify-center gap-x-3 xl:gap-x-4">
+          <div
+            className="hidden lg:block lg:flex lg:flex-row items-center justify-center gap-x-3 xl:gap-x-4"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
             {isLoggedIn ? (
               <div className="flex flex-col lg:flex-row items-center gap-[30px]">
                 <Link to="/login">

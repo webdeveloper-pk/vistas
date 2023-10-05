@@ -14,7 +14,7 @@ const Footer = () => {
             // data-aos-duration="1000"
             className="flex flex-col lg:flex-row items-center gap-x-[50px] 2xl:gap-x-[65px] gap-y-[30px]"
           >
-            <div>
+            <div data-aos="fade-right" data-aos-duration="1000">
               <Link to="/">
                 <img
                   src={logo}
@@ -23,7 +23,11 @@ const Footer = () => {
                 />
               </Link>
             </div>
-            <ul className="nav-list flex flex-col gap-x-[25px] gap-y-[10px] lg:flex-row uppercase text-center md:text-left text-[14px] md:text-[15px] 2xl:text-[16px]">
+            <ul
+              className="nav-list flex flex-col gap-x-[25px] gap-y-[10px] lg:flex-row uppercase text-center md:text-left text-[14px] md:text-[15px] 2xl:text-[16px]"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <li>
                 <a href="#home" className="footer-link">
                   Privacy
@@ -43,9 +47,8 @@ const Footer = () => {
           </nav>
           <div
             className="flex justify-center gap-x-[30px] xl:gap-x-[40px]"
-            // data-aos="fade-left"
-            // data-aos-easing="linear"
-            // data-aos-duration="1000"
+            data-aos="fade-left"
+            data-aos-duration="1000"
           >
             <a href="#!">
               <svg

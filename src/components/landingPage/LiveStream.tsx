@@ -3,10 +3,18 @@ import React from "react";
 const LiveStream = () => {
   return (
     <div className="mx-auto homepage-container px-[15px] md:px-[40px] lg:px-[40px] xl:px-[50px] 2xl:px-[60px] pb-[40px] md:pb-[40px] lg:pb-[50px] xl:pb-[50px] 2xl:pb-[60px]">
-      <h1 className="section-title text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[32px]">
+      <h1
+        className="section-title text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[32px]"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         Live Stream
       </h1>
-      <p className="mx-auto section-description text-[14px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] mt-[20px] md:mt-[20px] lg:mt-[20px] xl:mt-[20px] 2xl:mt-[23px]">
+      <p
+        className="mx-auto section-description text-[14px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] mt-[20px] md:mt-[20px] lg:mt-[20px] xl:mt-[20px] 2xl:mt-[23px]"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
         venenatis diam eu mi auctor mollis. Cras iaculis, ligula non pharetra
         sagittis, neque turpis lacinia lorem
@@ -40,7 +48,11 @@ const LiveStream = () => {
             </svg>
           </div>
           <div className="absolute top-[8px] right-[8px]">
-            <div className="flex items-center gap-x-[10px]">
+            <div
+              className="flex items-center gap-x-[10px]"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+            >
               <p className="normal-text text-[14px] md:text-[15px] 2xl:text-[16px] uppercase">
                 22 Views
               </p>

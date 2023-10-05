@@ -70,18 +70,40 @@ const Winners = () => {
                     <tr
                       key={index}
                       className="h-[50px] lg:h-[55px] 2xl:h-[57px]"
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
                     >
-                      <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] table-text whitespace-nowrap">
+                      <td
+                        className="text-[14px] lg:text-[15px] 2xl:text-[16px] table-text whitespace-nowrap"
+                        data-aos="fade-down"
+                        data-aos-duration="1500"
+                      >
                         {data?.user}
                       </td>
-                      <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] table-text whitespace-nowrap">
+                      <td
+                        className="text-[14px] lg:text-[15px] 2xl:text-[16px] table-text whitespace-nowrap"
+                        data-aos="fade-down"
+                        data-aos-duration="1500"
+                      >
                         {data?.prize}
                       </td>
-                      <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] table-text whitespace-nowrap">
+                      <td
+                        className="text-[14px] lg:text-[15px] 2xl:text-[16px] table-text whitespace-nowrap"
+                        data-aos="fade-down"
+                        data-aos-duration="1500"
+                      >
                         {data?.type}
                       </td>
-                      <td className="text-[14px] lg:text-[16px] 2xl:text-[19px] table-text whitespace-nowrap">
-                        <div className="flex items-center gap-x-[10px]">
+                      <td
+                        className="text-[14px] lg:text-[16px] 2xl:text-[19px] table-text whitespace-nowrap"
+                        data-aos="fade-down"
+                        data-aos-duration="1500"
+                      >
+                        <div
+                          className="flex items-center gap-x-[10px]"
+                          data-aos="fade-down"
+                          data-aos-duration="1500"
+                        >
                           {data?.winNumbers?.map((numbers: any) => {
                             return (
                               <div className="winners-number flex items-center justify-center">
