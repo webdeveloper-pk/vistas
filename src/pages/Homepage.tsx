@@ -121,9 +121,10 @@ const Homepage = () => {
             <Hero />
           </div>
           <Working />
+          <Winners />
         </div>
       </div>
-      <Winners />
+
       <About />
       <Contact />
       <LiveStream />
