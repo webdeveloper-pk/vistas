@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   // eslint-disable-next-line
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +41,10 @@ const Navbar = () => {
         <div className="mx-auto flex flex-col lg:flex-row justify-between homepage-container">
           <div className="flex flex-col lg:flex-row justify-center items-center gap-x-[30px] 2xl:gap-x-[50px]">
             <div className="w-full flex flex-row justify-between items-center gap-x-4">
-              <div data-aos="fade-right" data-aos-duration="1500">
+              <div
+                data-aos={location?.pathname === "/" ? "fade-right" : ""}
+                data-aos-duration={location?.pathname === "/" ? "1500" : ""}
+              >
                 <a href="/">
                   <img
                     src={logo}
@@ -133,17 +137,17 @@ const Navbar = () => {
                   </ul> */}
                   <div
                     className="block lg:hidden"
-                    data-aos="fade-left"
-                    data-aos-duration="1500"
+                    data-aos={location?.pathname === "/" ? "fade-left" : ""}
+                    data-aos-duration={location?.pathname === "/" ? "1500" : ""}
                   >
                     {isLoggedIn ? (
                       <div className="flex flex-col lg:flex-row items-center gap-[30px]">
-                        <Link to="/login">
+                        <Link to="/">
                           <button className="text-white hover:text-[#FFC905] transition duration-400 ease-in-out delay-50 text-[14px] md:text-[15px] 2xl:text-[16px]">
                             Dashbaord
                           </button>
                         </Link>
-                        <Link to="/signup">
+                        <Link to="/">
                           <button className="text-white hover:text-[#FFC905] transition duration-400 ease-in-out delay-50 text-[14px] md:text-[15px] 2xl:text-[16px]">
                             Player Tab
                           </button>
@@ -151,7 +155,9 @@ const Navbar = () => {
                       </div>
                     ) : (
                       <>
-                        <Link to="/home/dashboard">
+                        <Link
+                          to={location.pathname === "/" ? "players-tab" : ""}
+                        >
                           <button className="get-started-btn get-started-btn-custom middle-out text-black hover:text-black transition duration-700 ease-in-out delay-100 text-[14px] md:text-[15px] 2xl:text-[16px]">
                             Get Started
                           </button>
@@ -165,17 +171,17 @@ const Navbar = () => {
           </div>
           <div
             className="hidden lg:block lg:flex lg:flex-row items-center justify-center gap-x-3 xl:gap-x-4"
-            data-aos="fade-left"
-            data-aos-duration="1500"
+            data-aos={location?.pathname === "/" ? "fade-left" : ""}
+            data-aos-duration={location?.pathname === "/" ? "1500" : ""}
           >
             {isLoggedIn ? (
               <div className="flex flex-col lg:flex-row items-center gap-[30px]">
-                <Link to="/login">
+                <Link to="/">
                   <button className="text-white hover:text-[#FFC905] transition duration-400 ease-in-out delay-50 text-[14px] md:text-[15px] 2xl:text-[16px]">
                     Dashbaord
                   </button>
                 </Link>
-                <Link to="/signup">
+                <Link to="/">
                   <button className="text-white hover:text-[#FFC905] transition duration-400 ease-in-out delay-50 text-[14px] md:text-[15px] 2xl:text-[16px]">
                     Player Tab
                   </button>
@@ -183,7 +189,7 @@ const Navbar = () => {
               </div>
             ) : (
               <>
-                <Link to="/home/dashboard">
+                <Link to={location.pathname === "/" ? "players-tab" : ""}>
                   <button className="get-started-btn get-started-btn-custom middle-out text-black hover:text-black transition duration-700 ease-in-out delay-100 text-[14px] md:text-[15px] 2xl:text-[16px]">
                     Get Started
                   </button>

@@ -120,14 +120,13 @@ const Homepage = () => {
           <div className="hero-wrapper-margin">
             <Hero />
           </div>
+          <LiveStream />
           <Working />
-          <Winners />
         </div>
       </div>
-
+      <Winners />
       <About />
       <Contact />
-      <LiveStream />
       <Footer />
     </div>
   );

@@ -91,6 +91,12 @@ p {
 
 .get-started-btn-hero {
   border-radius: 20px;
+  width: 247px;
+  height: 68px;
+}
+
+.playerstab-btn {
+  border-radius: 20px;
   width: 208px;
   height: 68px;
 }
@@ -143,6 +149,33 @@ p {
 
 .get-started-btn-hero:before,
 .get-started-btn-hero:after {
+  background: linear-gradient(124deg, #f16820 -2.3%, #ffc905 102.79%);
+  transition: 0.7s ease;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 16px;
+}
+
+.playerstab-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: 0.7s ease;
+  z-index: 1;
+  background: linear-gradient(124deg, #ffc905 -2.3%, #f16820 102.79%);
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.playerstab-btn:before,
+.playerstab-btn:after {
   background: linear-gradient(124deg, #f16820 -2.3%, #ffc905 102.79%);
   transition: 0.7s ease;
   content: "";
@@ -332,12 +365,21 @@ header {
   opacity: 0.3;
 }
 
-/* .right-radial-img {
-  width: 1165px;
-  height: 1165px;
+.players-right-radial {
+  position: absolute;
+  bottom: -10%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 1165px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(164, 168, 193, 0.55) 0%,
+    rgba(164, 168, 193, 0) 100%
+  );
   filter: blur(106.18489837646484px);
-  opacity: 0.5;
-} */
+  opacity: 0.27;
+}
 
 .left-radial {
   position: absolute;
@@ -345,6 +387,21 @@ header {
   left: 0%;
   width: 1022px;
   height: 1022px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(164, 168, 193, 0.04) 0%,
+    rgba(164, 168, 193, 0) 100%
+  );
+  filter: blur(93.15104675292969px);
+  opacity: 0.03;
+}
+
+.players-left-radial {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 1022%;
   background: radial-gradient(
     50% 50% at 50% 50%,
     rgba(164, 168, 193, 0.04) 0%,
@@ -559,7 +616,7 @@ header {
 }
 /* winners */
 
-.winners-table-wrapper {
+.winners-table-outer-wrapper {
   border-radius: 16px;
   border: 0.3px solid rgb(175, 179, 206, 0.2);
   background: linear-gradient(
@@ -569,7 +626,18 @@ header {
   );
 }
 
-.table-text {
+.winners-players-table-outer-wrapper {
+  border-radius: 16px;
+  border: 0.3px solid rgb(175, 179, 206, 0.2);
+  background: linear-gradient(
+    124deg,
+    rgba(175, 179, 206, 0.06) -2.3%,
+    rgba(98, 96, 118, 0.06) 102.79%
+  );
+  width: 100%;
+}
+
+.winners-table-text {
   color: #fff;
   font-family: "Montserrat";
   font-style: normal;
@@ -591,7 +659,6 @@ header {
 
 .winners-table-wrapper table thead tr td:nth-child(1) {
   padding-left: 30px;
-  /* width: 200px; */
 }
 
 .winners-table-wrapper table thead tr td:nth-child(2) {
@@ -663,7 +730,7 @@ header {
 
 .winners-table-wrapper .winners-number {
   border-radius: 11.251px;
-  border: 0.273px solid rgb(175, 179, 206, 0.1);
+  border: 0.3px solid rgb(175, 179, 206, 0.2);
   background: linear-gradient(124deg, #ffc905 -2.3%, #f16820 102.79%);
   width: 39.046px;
   height: 39.046px;
@@ -901,6 +968,515 @@ header {
   height: 100%;
 }
 
+/* playtab */
+
+.playtab-title {
+  color: #fff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.playtab-description {
+  color: #fff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.current-player-title {
+  color: #fff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.players-table-wrapper {
+  border-radius: 16px;
+  border: 0.3px solid rgb(175, 179, 206, 0.2);
+  background: rgba(217, 217, 217, 0.02);
+}
+
+.players-table-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.players-table-container {
+  overflow: auto;
+}
+
+.players-table-wrapper .table {
+  color: #fff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.players-table-wrapper table thead tr td:nth-child(1) {
+  padding-left: 30px;
+  /* width: 200px; */
+}
+
+.players-table-wrapper table thead tr td:nth-child(2) {
+  width: 150px;
+}
+
+.players-table-wrapper table tbody tr td:nth-child(1) {
+  border-radius: 11px 0 0 11px;
+  padding-left: 30px;
+}
+
+.players-table-wrapper table tbody tr td:last-child {
+  border-radius: 0 11px 11px 0 !important;
+}
+
+.players-table-wrapper table tbody tr {
+  border: 1px solid rgba(54, 54, 54, 0.23);
+  background: rgba(217, 217, 217, 0.03);
+}
+
+.players-table-wrapper .players-number {
+  border-radius: 11.251px;
+  border: 0.273px solid rgb(175, 179, 206, 0.1);
+  background: linear-gradient(
+    124deg,
+    rgba(175, 179, 206, 0.06) -2.3%,
+    rgba(98, 96, 118, 0.06) 102.79%
+  );
+  width: 39.046px;
+  height: 39.046px;
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.winners-players-header {
+  border-radius: 16px;
+  border: 0.3px solid rgb(175, 179, 206, 0.2);
+  background: linear-gradient(
+    124deg,
+    rgba(175, 179, 206, 0.06) -2.3%,
+    rgba(98, 96, 118, 0.06) 102.79%
+  );
+  width: 100%;
+  height: 77px;
+}
+
+.winners-search-title {
+  color: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.winners-or {
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* modal */
+
+.custom-modal-style {
+  background: #1e1e29;
+  padding: 40px 58px 33px 58px;
+  border-radius: 30px;
+  width: 1500px;
+}
+
+.modal-title {
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.modal-description {
+  color: #969696;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-custom-input {
+  border-radius: 11px;
+  border: 1px solid rgba(54, 54, 54, 0.23);
+  background: rgba(217, 217, 217, 0.03);
+  height: 62px;
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input {
+  border: 1px solid transparent;
+  background: transparent;
+  height: 62px;
+  color: white;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  > .ant-input:first-child,
+:where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input-group-addon:first-child {
+  border-start-end-radius: 4px;
+  border-end-end-radius: 4px;
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input-group-addon:first-child {
+  border-inline-end: 1 !important;
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input-group-addon {
+  color: #76c9ed;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 20px;
+  border-radius: 6px;
+  border-radius: 11px;
+  border: 1px solid rgba(54, 54, 54, 0.23);
+  background: rgba(217, 217, 217, 0.03);
+  width: 62px;
+  height: 62px;
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input:hover {
+  border-right: 1px solid rgba(54, 54, 54, 0.23);
+  box-shadow: 0 0 2px rgba(54, 54, 54, 0.23);
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input:focus {
+  border-right: 1px solid rgba(54, 54, 54, 0.23);
+  box-shadow: 0 0 2px rgba(54, 54, 54, 0.23);
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input:active {
+  border-right: 1px solid rgba(54, 54, 54, 0.23);
+  box-shadow: 0 0 2px rgba(54, 54, 54, 0.23);
+}
+
+.modal-input-label {
+  color: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.radio-wrapper {
+  height: 76px;
+  border-radius: 11px;
+  background: rgba(217, 217, 217, 0.03);
+  display: flex;
+  align-items: center;
+  padding-left: 22px;
+  width: 100%;
+}
+
+.active-border {
+  border: 1px solid rgba(255, 201, 5, 0.7);
+}
+
+.not-active-border {
+  border: 1px solid rgba(205, 205, 205, 0.23);
+}
+
+.radio-text {
+  color: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-radio-wrapper
+  .ant-radio-inner {
+  border-color: rgba(217, 217, 217, 0.38) !important;
+  background-color: transparent !important;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-radio-wrapper
+  .ant-radio-checked
+  .ant-radio-inner {
+  border-color: #ffc905 !important;
+  background-color: transparent !important;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-radio-wrapper
+  .ant-radio-inner::after {
+  background: linear-gradient(
+    124deg,
+    #ffc905 -2.3%,
+    #f16820 102.79%
+  ) !important;
+}
+
+.modal-custom-simple-input-wrapper {
+  height: 62px;
+  border-radius: 11px;
+  border: 1px solid rgba(54, 54, 54, 0.23);
+  background: rgba(217, 217, 217, 0.03);
+  padding-left: 23px;
+  padding-right: 20px;
+}
+
+.custom-simple-input-wrapper {
+  height: 44.073px;
+  border-radius: 12.714px;
+  border: 0.3px solid rgb(175, 179, 206, 0.2);
+  background: linear-gradient(
+    124deg,
+    rgba(175, 179, 206, 0.06) -2.3%,
+    rgba(98, 96, 118, 0.06) 102.79%
+  );
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.custom-opt-input-wrapper {
+  border-radius: 12.714px;
+  border: 0.3px solid rgb(175, 179, 206, 0.2);
+  background: linear-gradient(
+    124deg,
+    rgba(175, 179, 206, 0.06) -2.3%,
+    rgba(98, 96, 118, 0.06) 102.79%
+  );
+}
+
+.modal-custom-simple-input {
+  background: transparent;
+  border: none;
+}
+
+.custom-simple-input {
+  background: transparent;
+  border: none;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.custom-opt-input {
+  background: transparent;
+  border: none;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-custom-simple-input:hover {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}
+
+.modal-custom-simple-input:focus {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}
+
+.modal-custom-simple-input:active {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}
+
+.modal-custom-simple-input {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-custom-simple-input::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.custom-simple-input:hover {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}
+
+.custom-simple-input:focus {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}
+
+.custom-simple-input:active {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}
+
+.custom-simple-input {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.custom-simple-input::placeholder {
+  color: rgba(187, 187, 187, 0.31);
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.custom-opt-input:hover {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}
+
+.custom-opt-input:focus {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}
+
+.custom-opt-input:active {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}
+
+.custom-opt-input {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.custom-opt-input::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.input-set-text {
+  color: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-add-btn {
+  color: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  width: 137px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  background: rgba(217, 217, 217, 0.03);
+}
+
+.modal-add-more-btn {
+  width: 137px;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      rgba(150, 150, 150, 0.23) 50%,
+      transparent 50%
+    ),
+    linear-gradient(90deg, rgba(150, 150, 150, 0.23) 50%, transparent 50%),
+    linear-gradient(0deg, rgba(150, 150, 150, 0.23) 50%, transparent 50%),
+    linear-gradient(0deg, rgba(150, 150, 150, 0.23) 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
+  background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
+  animation: border-dance 25s infinite linear;
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
+  }
+  100% {
+    background-position: 100% 0px, 0px 100%, 0px 0px, 100% 100%;
+  }
+}
+
+.modal-submit-btn {
+  border-radius: 11px;
+  border: 0.7px solid rgba(217, 217, 217, 0.03);
+  background: linear-gradient(124deg, #ffc905 -2.3%, #f16820 102.79%);
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
 /* media screens */
 
 @media screen and (min-width: 1920px) {
@@ -922,6 +1498,15 @@ header {
   .get-started-btn-hero:after {
     border-radius: 20px;
   }
+  .playerstab-btn {
+    border-radius: 20px;
+    width: 247px;
+    height: 68px;
+  }
+  .playerstab-btn:before,
+  .playerstab-btn:after {
+    border-radius: 20px;
+  }
   .hero-wrapper-margin {
     padding-top: 93px;
   }
@@ -941,8 +1526,16 @@ header {
   .contact-form-wrapper {
     width: 788px;
   }
-  .winners-table-wrapper {
+  .winners-table-outer-wrapper {
     width: 890px;
+  }
+  .playtab-title {
+    width: 80%;
+  }
+  .custom-modal-style {
+    padding: 40px 58px 33px 58px;
+    border-radius: 30px;
+    width: 1500px;
   }
 }
 
@@ -965,6 +1558,15 @@ header {
   .get-started-btn-hero:after {
     border-radius: 20px;
   }
+  .playerstab-btn {
+    border-radius: 20px;
+    width: 247px;
+    height: 68px;
+  }
+  .playerstab-btn:before,
+  .playerstab-btn:after {
+    border-radius: 20px;
+  }
   .hero-wrapper-margin {
     padding-top: 93px;
   }
@@ -984,8 +1586,16 @@ header {
   .contact-form-wrapper {
     width: 788px;
   }
-  .winners-table-wrapper {
+  .winners-table-outer-wrapper {
     width: 890px;
+  }
+  .playtab-title {
+    width: 80%;
+  }
+  .custom-modal-style {
+    padding: 40px 58px 33px 58px;
+    border-radius: 30px;
+    width: 1500px;
   }
 }
 
@@ -1008,6 +1618,15 @@ header {
   .get-started-btn-hero:after {
     border-radius: 20px;
   }
+  .playerstab-btn {
+    border-radius: 20px;
+    width: 247px;
+    height: 68px;
+  }
+  .playerstab-btn:before,
+  .playerstab-btn:after {
+    border-radius: 20px;
+  }
   .hero-wrapper-margin {
     padding-top: 93px;
   }
@@ -1027,8 +1646,34 @@ header {
   .contact-form-wrapper {
     width: 788px;
   }
-  .winners-table-wrapper {
+  .winners-table-outer-wrapper {
     width: 890px;
+  }
+  .playtab-title {
+    width: 80%;
+  }
+  .custom-modal-style {
+    padding: 40px 58px 33px 58px;
+    border-radius: 30px;
+    width: 90%;
+  }
+  .players-table-wrapper table thead tr td:nth-child(1) {
+    min-width: 200px;
+  }
+  .players-table-wrapper table thead tr td:nth-child(2) {
+    min-width: 150px;
+  }
+  .players-table-wrapper table thead tr td:nth-child(3) {
+    min-width: 200px;
+  }
+  .winners-table-wrapper table thead tr td:nth-child(1) {
+    min-width: 180px;
+  }
+  .winners-table-wrapper table thead tr td:nth-child(2) {
+    min-width: 80px;
+  }
+  .winners-table-wrapper table thead tr td:nth-child(3) {
+    min-width: 140px;
   }
 }
 
@@ -1051,6 +1696,15 @@ header {
   .get-started-btn-hero:after {
     border-radius: 18px;
   }
+  .playerstab-btn {
+    border-radius: 18px;
+    width: 240px;
+    height: 65px;
+  }
+  .playerstab-btn:before,
+  .playerstab-btn:after {
+    border-radius: 18px;
+  }
   .hero-wrapper-margin {
     padding-top: 93px;
   }
@@ -1070,8 +1724,56 @@ header {
   .contact-form-wrapper {
     width: 788px;
   }
-  .winners-table-wrapper {
+  .winners-table-outer-wrapper {
     width: 890px;
+  }
+  .playtab-title {
+    width: 80%;
+  }
+  .custom-modal-style {
+    padding: 40px 50px 33px 50px;
+    border-radius: 30px;
+    width: 90%;
+  }
+  .modal-submit-btn {
+    height: 70px;
+  }
+  .radio-wrapper {
+    height: 70px;
+  }
+
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input {
+    font-size: 16px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input-group-addon {
+    font-size: 18px;
+  }
+  .players-table-wrapper {
+    min-width: 100%;
+    overflow: auto;
+  }
+
+  .players-table-wrapper table thead tr td:nth-child(1) {
+    min-width: 200px;
+  }
+  .players-table-wrapper table thead tr td:nth-child(2) {
+    min-width: 150px;
+  }
+  .players-table-wrapper table thead tr td:nth-child(3) {
+    min-width: 200px;
+  }
+  .winners-table-wrapper table thead tr td:nth-child(1) {
+    min-width: 180px;
+  }
+  .winners-table-wrapper table thead tr td:nth-child(2) {
+    min-width: 80px;
+  }
+  .winners-table-wrapper table thead tr td:nth-child(3) {
+    min-width: 140px;
   }
 }
 
@@ -1094,6 +1796,15 @@ header {
   .get-started-btn-hero:after {
     border-radius: 17px;
   }
+  .playerstab-btn {
+    border-radius: 17px;
+    width: 230px;
+    height: 60px;
+  }
+  .playerstab-btn:before,
+  .playerstab-btn:after {
+    border-radius: 17px;
+  }
   .hero-wrapper-margin {
     padding-top: 93px;
   }
@@ -1113,8 +1824,60 @@ header {
   .contact-form-wrapper {
     width: 788px;
   }
-  .winners-table-wrapper {
+  .winners-table-outer-wrapper {
     width: 890px;
+  }
+  .playtab-title {
+    width: 80%;
+  }
+  .footer-wrapper {
+    border-radius: 35px;
+  }
+  .custom-modal-style {
+    padding: 40px 45px 33px 45px;
+    border-radius: 30px;
+    width: 85%;
+  }
+  .modal-submit-btn {
+    height: 65px;
+  }
+  .radio-wrapper {
+    height: 65px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input {
+    font-size: 16px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input-group-addon {
+    font-size: 18px;
+  }
+  .modal-custom-simple-input {
+    font-size: 16px;
+  }
+  .players-table-wrapper table thead tr td:nth-child(1) {
+    min-width: 200px;
+  }
+  .players-table-wrapper table thead tr td:nth-child(2) {
+    min-width: 150px;
+  }
+  .players-table-wrapper table thead tr td:nth-child(3) {
+    min-width: 200px;
+  }
+  .winners-table-wrapper table thead tr td:nth-child(1) {
+    min-width: 180px;
+  }
+  .winners-table-wrapper table thead tr td:nth-child(2) {
+    min-width: 80px;
+  }
+  .winners-table-wrapper table thead tr td:nth-child(3) {
+    min-width: 140px;
+  }
+  .winners-players-header {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -1146,6 +1909,15 @@ header {
   .get-started-btn-hero:after {
     border-radius: 17px;
   }
+  .playerstab-btn {
+    border-radius: 17px;
+    width: 230px;
+    height: 60px;
+  }
+  .playerstab-btn:before,
+  .playerstab-btn:after {
+    border-radius: 17px;
+  }
   .hero-title {
     width: 90%;
   }
@@ -1162,8 +1934,42 @@ header {
   .contact-form-wrapper {
     width: 788px;
   }
-  .winners-table-wrapper {
+  .winners-table-outer-wrapper {
     width: 800px;
+  }
+  .playtab-title {
+    width: 80%;
+  }
+  .footer-wrapper {
+    border-radius: 30px;
+  }
+  .winners-players-header {
+    width: 100%;
+    height: auto;
+  }
+  .custom-modal-style {
+    padding: 30px 30px 25px 30px;
+    border-radius: 25px;
+    width: 90%;
+  }
+  .modal-submit-btn {
+    height: 65px;
+  }
+  .radio-wrapper {
+    height: 65px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input {
+    font-size: 15px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input-group-addon {
+    font-size: 17px;
+  }
+  .modal-custom-simple-input {
+    font-size: 15px;
   }
 }
 
@@ -1195,6 +2001,15 @@ header {
   .get-started-btn-hero:after {
     border-radius: 17px;
   }
+  .playerstab-btn {
+    border-radius: 17px;
+    width: 230px;
+    height: 60px;
+  }
+  .playerstab-btn:before,
+  .playerstab-btn:after {
+    border-radius: 17px;
+  }
   .hero-title {
     width: 100%;
   }
@@ -1211,8 +2026,37 @@ header {
   .contact-form-wrapper {
     width: 600px;
   }
-  .winners-table-wrapper {
+  .winners-table-outer-wrapper {
     width: 80%;
+  }
+  .playtab-title {
+    width: 80%;
+  }
+  .footer-wrapper {
+    border-radius: 25px;
+  }
+  .winners-players-header {
+    width: 100%;
+    height: auto;
+  }
+  .custom-modal-style {
+    padding: 30px 30px 25px 30px;
+    border-radius: 25px;
+    width: 90%;
+  }
+  .modal-submit-btn {
+    height: 65px;
+  }
+  .radio-wrapper {
+    height: 65px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input {
+    font-size: 15px;
+  }
+  .modal-custom-simple-input {
+    font-size: 15px;
   }
 }
 
@@ -1244,6 +2088,15 @@ header {
   .get-started-btn-hero:after {
     border-radius: 15px;
   }
+  .playerstab-btn {
+    border-radius: 15px;
+    width: 220px;
+    height: 50px;
+  }
+  .playerstab-btn:before,
+  .playerstab-btn:after {
+    border-radius: 15px;
+  }
   .contact-form-wrapper {
     width: 90%;
   }
@@ -1267,7 +2120,7 @@ header {
     width: 30.046px;
     height: 30.046px;
   }
-  .winners-table-wrapper {
+  .winners-table-outer-wrapper {
     width: 100%;
   }
   .winners-table-wrapper table thead tr td {
@@ -1279,7 +2132,45 @@ header {
   .winners-table-wrapper table tbody tr td:last-child {
     padding-right: 20px;
   }
+  .players-table-wrapper .players-number {
+    border-radius: 9.251px;
+    width: 30.046px;
+    height: 30.046px;
+  }
+  .players-table-wrapper {
+    width: 100%;
+  }
+  .players-table-wrapper table thead tr td {
+    padding-left: 20px;
+  }
+  .players-table-wrapper table tbody tr td {
+    padding-left: 20px;
+  }
+  .players-table-wrapper table tbody tr td:last-child {
+    padding-right: 20px;
+  }
+  .winners-players-header {
+    width: 100%;
+    height: auto;
+  }
+  .custom-modal-style {
+    padding: 30px 30px 25px 30px;
+    border-radius: 25px;
+    width: 90%;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input-group-addon {
+    font-size: 16px;
+  }
+  .modal-custom-simple-input-wrapper {
+    height: 60px;
+  }
+  .modal-add-btn {
+    height: 60px;
+  }
 }
+
 @media screen and (max-width: 767px) and (min-width: 426px) {
   .hero-title {
     width: 90%;
@@ -1294,8 +2185,14 @@ header {
     width: 80%;
     height: 300px;
   }
-  .winners-table-wrapper {
+  .winners-table-outer-wrapper {
     width: 90%;
+  }
+  .playtab-title {
+    width: 90%;
+  }
+  .footer-wrapper {
+    border-radius: 20px;
   }
 }
 
@@ -1336,6 +2233,15 @@ header {
   .get-started-btn-hero:after {
     border-radius: 15px;
   }
+  .playerstab-btn {
+    border-radius: 15px;
+    width: 210px;
+    height: 50px;
+  }
+  .playerstab-btn:before,
+  .playerstab-btn:after {
+    border-radius: 15px;
+  }
   .live-stream-wrapper {
     width: 100%;
     height: 300px;
@@ -1358,7 +2264,7 @@ header {
     height: 59px;
     padding: 22.651px 27.878px;
   }
-  .winners-table-wrapper {
+  .winners-table-outer-wrapper {
     width: 100%;
   }
   .winners-table-wrapper .winners-number {
@@ -1374,5 +2280,59 @@ header {
   }
   .winners-table-wrapper table tbody tr td:last-child {
     padding-right: 30px;
+  }
+  .players-table-wrapper {
+    width: 100%;
+  }
+  .players-table-wrapper .players-number {
+    border-radius: 9.251px;
+    width: 30.046px;
+    height: 30.046px;
+  }
+  .players-table-wrapper table thead tr td {
+    padding-left: 30px;
+  }
+  .players-table-wrapper table tbody tr td {
+    padding-left: 30px;
+  }
+  .players-table-wrapper table tbody tr td:last-child {
+    padding-right: 30px;
+  }
+  .playtab-title {
+    width: 90%;
+  }
+  .footer-wrapper {
+    border-radius: 20px;
+  }
+  .winners-players-header {
+    width: 100%;
+    height: auto;
+  }
+  .custom-modal-style {
+    padding: 20px 15px 20px 15px;
+    border-radius: 15px;
+    width: 90%;
+  }
+  .modal-submit-btn {
+    height: 60px;
+  }
+  .radio-wrapper {
+    height: 60px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input {
+    font-size: 14px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input-group-addon {
+    font-size: 16px;
+  }
+  .modal-add-btn {
+    height: 60px;
+  }
+  .modal-custom-simple-input {
+    font-size: 14px;
   }
 }

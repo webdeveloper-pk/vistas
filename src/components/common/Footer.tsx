@@ -1,20 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/images/footer-logo.png";
 
 const Footer = () => {
+  const location = useLocation();
+
   return (
     <div className="">
       <div className="homepage-container px-[15px] md:px-[40px] lg:px-[40px] xl:px-[50px] 2xl:px-[60px] mx-auto">
         <div className="footer-wrapper px-[20px] md:px-[30px] lg:px-[45px] py-[20px] lg:py-[30px] flex flex-col gap-y-[40px] items-center lg:flex-row md:justify-between md:items-center">
-          <nav
-            // className="shift"
-            // data-aos="fade-right"
-            // data-aos-easing="linear"
-            // data-aos-duration="1000"
-            className="flex flex-col lg:flex-row items-center gap-x-[50px] 2xl:gap-x-[65px] gap-y-[30px]"
-          >
-            <div data-aos="fade-right" data-aos-duration="1000">
+          <nav className="flex flex-col lg:flex-row items-center gap-x-[50px] 2xl:gap-x-[65px] gap-y-[30px]">
+            <div
+              data-aos={location?.pathname === "/" ? "fade-right" : ""}
+              data-aos-duration={location?.pathname === "/" ? "1000" : ""}
+            >
               <Link to="/">
                 <img
                   src={logo}
@@ -25,8 +24,8 @@ const Footer = () => {
             </div>
             <ul
               className="nav-list flex flex-col gap-x-[25px] gap-y-[10px] lg:flex-row uppercase text-center md:text-left text-[14px] md:text-[15px] 2xl:text-[16px]"
-              data-aos="fade-up"
-              data-aos-duration="1000"
+              data-aos={location?.pathname === "/" ? "fade-up" : ""}
+              data-aos-duration={location?.pathname === "/" ? "1000" : ""}
             >
               <li>
                 <a href="#home" className="footer-link">
@@ -47,8 +46,8 @@ const Footer = () => {
           </nav>
           <div
             className="flex justify-center gap-x-[30px] xl:gap-x-[40px]"
-            data-aos="fade-left"
-            data-aos-duration="1000"
+            data-aos={location?.pathname === "/" ? "fade-left" : ""}
+            data-aos-duration={location?.pathname === "/" ? "1000" : ""}
           >
             <a href="#!">
               <svg
