@@ -53,7 +53,10 @@ const PlayersTab = ({ players, winners }: any) => {
             </div>
             <div className="flex flex-col lg:flex-row items-start justify-between gap-[20px] md:gap-[25px] pb-[40px] md:pb-[40px] lg:pb-[50px] xl:pb-[50px] 2xl:pb-[60px]">
               {/* currents p[layers */}
-              <div className="w-full lg:w-[50%] overflow-auto">
+              <div
+                className="w-full lg:w-[50%] overflow-auto"
+                style={{ zIndex: 9999 }}
+              >
                 <div className="flex items-center justify-center lg:justify-start gap-x-[4px] ml-[15px] lg:ml-[25px] mb-[20px] lg:mb-[23px]">
                   <span>
                     <svg

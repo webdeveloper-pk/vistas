@@ -5,8 +5,8 @@ const WinnersTable = ({ winners }: any) => {
   const location = useLocation();
   return (
     <div
-      className={`winners-table-wrapper mx-auto px-[13px] pb-[15px] md:pb-[17px overflow-auto ${
-        location?.pathname === "/" ? "pt-[10px]" : ""
+      className={`winners-table-wrapper mx-auto px-[13px] pb-[15px] md:pb-[17px] overflow-auto ${
+        location?.pathname === "/" ? "pt-[10px] mr-[0px]" : "lg:mr-[15px]"
       }`}
     >
       <div className="winners-table-container">
