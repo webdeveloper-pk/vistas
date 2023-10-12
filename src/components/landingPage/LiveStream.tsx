@@ -15,12 +15,20 @@ const LiveStream = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-        venenatis diam eu mi auctor mollis. Cras iaculis, ligula non pharetra
-        sagittis, neque turpis lacinia lorem
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis diam eu mi auctor mollis. Cras
+        iaculis, ligula non pharetra sagittis, neque turpis lacinia lorem
       </p>
       <div className="mt-[30px] md:mt-[30px] lg:mt-[40px] xl:mt-[50px] 2xl:mt-[60px]">
-        <div className="live-stream-wrapper mx-auto relative">
+        <iframe
+          width="560"
+          height="315"
+          src="https://streaming.player.evmux.com/player?liveId=317bddb9-8f69-41be-a3ab-d9d446d8d9c9"
+          title="evmux video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        {/* <div className="live-stream-wrapper mx-auto relative">
           <div className="absolute center-position">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +78,7 @@ const LiveStream = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

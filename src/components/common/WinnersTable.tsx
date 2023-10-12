@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-const WinnersTable = ({ winners }: any) => {
+const WinnersTable = ({ data, loading }: any) => {
   const location = useLocation();
   return (
     <div
@@ -16,9 +16,7 @@ const WinnersTable = ({ winners }: any) => {
               <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap">
                 Telegram Handle
               </td>
-              <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap">
-                Prize
-              </td>
+              <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap">Prize</td>
               <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap">
                 Game Type
               </td>
@@ -27,60 +25,62 @@ const WinnersTable = ({ winners }: any) => {
               </td>
             </tr>
           </thead>
-          <tbody>
-            {winners?.map((data: any, index: number) => {
-              return (
-                <tr
-                  key={index}
-                  className="h-[50px] lg:h-[55px] 2xl:h-[57px]"
-                  data-aos={location?.pathname === "/" ? "fade-up" : ""}
-                  data-aos-duration={location?.pathname === "/" ? "1000" : ""}
-                >
-                  <td
-                    className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap"
-                    data-aos={location?.pathname === "/" ? "fade-down" : ""}
-                    data-aos-duration={location?.pathname === "/" ? "1500" : ""}
-                  >
-                    {data?.user}
-                  </td>
-                  <td
-                    className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap"
-                    data-aos={location?.pathname === "/" ? "fade-down" : ""}
-                    data-aos-duration={location?.pathname === "/" ? "1500" : ""}
-                  >
-                    {data?.prize}
-                  </td>
-                  <td
-                    className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap"
-                    data-aos={location?.pathname === "/" ? "fade-down" : ""}
-                    data-aos-duration={location?.pathname === "/" ? "1500" : ""}
-                  >
-                    {data?.type}
-                  </td>
-                  <td
-                    className="text-[14px] lg:text-[16px] 2xl:text-[19px] winners-table-text whitespace-nowrap"
-                    data-aos={location?.pathname === "/" ? "fade-down" : ""}
-                    data-aos-duration={location?.pathname === "/" ? "1500" : ""}
-                  >
-                    <div
-                      className="flex items-center gap-x-[10px]"
-                      data-aos={location?.pathname === "/" ? "fade-down" : ""}
-                      data-aos-duration={
-                        location?.pathname === "/" ? "1500" : ""
-                      }
+          <tbody style={loading ? { height: "200px", position: "relative" } : {}}>
+            {loading ? (
+              <div className="loading-wrapper">
+                <div className="loading"></div>
+              </div>
+            ) : (
+              <>
+                {data?.map((content: any, index: number) => {
+                  return (
+                    <tr
+                      key={index}
+                      className="h-[50px] lg:h-[55px] 2xl:h-[57px]"
+                      data-aos={location?.pathname === "/" ? "fade-up" : ""}
+                      data-aos-duration={location?.pathname === "/" ? "1000" : ""}
                     >
-                      {data?.winNumbers?.map((numbers: any) => {
-                        return (
-                          <div className="winners-number flex items-center justify-center">
-                            {numbers}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </td>
-                </tr>
-              );
-            })}
+                      <td
+                        className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap"
+                        data-aos={location?.pathname === "/" ? "fade-down" : ""}
+                        data-aos-duration={location?.pathname === "/" ? "1500" : ""}
+                      >
+                        {content?.entry?.telegram_handle}
+                      </td>
+                      <td
+                        className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap"
+                        data-aos={location?.pathname === "/" ? "fade-down" : ""}
+                        data-aos-duration={location?.pathname === "/" ? "1500" : ""}
+                      >
+                        ${content?.price}
+                      </td>
+                      <td
+                        className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap"
+                        data-aos={location?.pathname === "/" ? "fade-down" : ""}
+                        data-aos-duration={location?.pathname === "/" ? "1500" : ""}
+                      >
+                        {content?.entry?.game_type}
+                      </td>
+                      <td
+                        className="text-[14px] lg:text-[16px] 2xl:text-[19px] winners-table-text whitespace-nowrap"
+                        data-aos={location?.pathname === "/" ? "fade-down" : ""}
+                        data-aos-duration={location?.pathname === "/" ? "1500" : ""}
+                      >
+                        <div
+                          className="flex items-center gap-x-[10px]"
+                          data-aos={location?.pathname === "/" ? "fade-down" : ""}
+                          data-aos-duration={location?.pathname === "/" ? "1500" : ""}
+                        >
+                          {content?.entry?.added_numbers?.map((numbers: any) => {
+                            return <div className="winners-number flex items-center justify-center">{numbers}</div>;
+                          })}
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </>
+            )}
           </tbody>
         </table>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
+import SpinnerGrow from "../common/SpinnerGrow";
 
-const Contact = () => {
+const Contact = ({ contactUs, handleChange, cResults, handleContactUs }: any) => {
   return (
     <div className="mx-auto homepage-container px-[15px] md:px-[40px] lg:px-[40px] xl:px-[50px] 2xl:px-[60px] pb-[60px] md:pb-[60px] lg:pb-[70px] xl:pb-[80px] 2xl:pb-[87px]">
       <h1
@@ -15,15 +16,18 @@ const Contact = () => {
         data-aos="fade-left"
         data-aos-duration="1000"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-        venenatis diam eu mi auctor mollis. Cras iaculis, ligula non pharetra
-        sagittis, neque turpis lacinia lorem
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis diam eu mi auctor mollis. Cras
+        iaculis, ligula non pharetra sagittis, neque turpis lacinia lorem
       </p>
       <div className="mt-[20px] md:mt-[25px] lg:mt-[30px] xl:mt-[35px] 2xl:mt-[38px]">
-        <div
+        <form
           className="contact-form-wrapper p-[20px] mx-auto"
           data-aos="zoom-out"
           data-aos-duration="1000"
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleContactUs();
+          }}
         >
           <div
             className="w-full flex flex-col gap-y-[15px] md:flex-row md:justify-between items-center"
@@ -35,6 +39,10 @@ const Contact = () => {
                 placeholder="Name"
                 type="text"
                 className="w-full landing-input"
+                name="name"
+                value={contactUs.name}
+                onChange={handleChange}
+                required
               />
             </div>
             <div className="w-full md:w-[49%]">
@@ -42,40 +50,48 @@ const Contact = () => {
                 placeholder="Email"
                 type="email"
                 className="w-full landing-input"
+                name="email"
+                value={contactUs.email}
+                onChange={handleChange}
+                required
               />
             </div>
           </div>
-          <div
-            className="w-full mt-[15px]"
-            data-aos="zoom-in"
-            data-aos-duration="1500"
-          >
+          <div className="w-full mt-[15px]" data-aos="zoom-in" data-aos-duration="1500">
             <input
               placeholder="Subject"
               type="text"
               className="w-full landing-input"
+              name="subject"
+              value={contactUs.subject}
+              onChange={handleChange}
+              required
             />
           </div>
-          <div
-            className="w-full mt-[15px]"
-            data-aos="zoom-in"
-            data-aos-duration="1500"
-          >
+          <div className="w-full mt-[15px]" data-aos="zoom-in" data-aos-duration="1500">
             <textarea
               placeholder="Write here"
               className="w-full landing-textarea"
+              name="message"
+              value={contactUs.message}
+              onChange={handleChange}
+              required
             />
           </div>
-          <div
-            className="w-full mt-[10px]"
-            data-aos="zoom-in"
-            data-aos-duration="1500"
-          >
+          <div className="w-full mt-[10px]" data-aos="zoom-in" data-aos-duration="1500">
             <button className="contact-btn text-[14px] lg:text-[15px] 2xl:text-[15.5px]">
-              <span className="contact-submit">SUBMIT YOUR REQUEST</span>
+              <span className="contact-submit">
+                {cResults.loading ? (
+                  <>
+                    <SpinnerGrow /> Loading...
+                  </>
+                ) : (
+                  <>{cResults.success ? "Done" : "SUBMIT YOUR REQUEST"}</>
+                )}
+              </span>
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

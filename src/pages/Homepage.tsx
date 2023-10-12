@@ -24,8 +24,20 @@ import icon7 from "../assets/images/icon7.png";
 import icon8 from "../assets/images/icon8.png";
 import icon9 from "../assets/images/icon9.png";
 import icon10 from "../assets/images/icon10.png";
+import axios from "axios";
 
 const Homepage = () => {
+  const [data, setData] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+  const [contactUs, setContactUs] = React.useState({
+    csrfmiddlewaretoken: "taNAhyzkX7K51g982azXMVPBt4mJ1RiCKs5IoifhRINmZ8x9UceCNVjQPp5M0jVg",
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [cResults, setCResults] = React.useState({ data: [], loading: false, success: false });
   React.useEffect(() => {
     AOS.init({
       duration: 2500,
@@ -33,15 +45,73 @@ const Homepage = () => {
       offset: 50,
     });
   }, []);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setContactUs({ ...contactUs, [e.target.name]: e.target.value });
+  };
+
+  const handleContactUs = async () => {
+    try {
+      setCResults({ ...cResults, loading: true });
+      const formdata = new FormData();
+      formdata.append("csrfmiddlewaretoken", contactUs.csrfmiddlewaretoken);
+      formdata.append("name", contactUs.name);
+      formdata.append("email", contactUs.email);
+      formdata.append("subject", contactUs.subject);
+      formdata.append("message", contactUs.message);
+
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/contact/`, formdata);
+      if (response.data) {
+        setCResults({ ...cResults, data: response.data, loading: false, success: true });
+      }
+    } catch (error) {
+      setCResults({ ...cResults, loading: false });
+    }
+  };
+
+  React.useEffect(() => {
+    async function fetchWinners() {
+      try {
+        setLoading(true);
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/winners/`);
+        if (response.data) {
+          setData(response.data);
+          setLoading(false);
+        }
+      } catch (error) {
+        setLoading(false);
+      }
+    }
+    fetchWinners();
+  }, []);
+  React.useEffect(() => {
+    if (cResults.success) {
+      setContactUs({
+        csrfmiddlewaretoken: "taNAhyzkX7K51g982azXMVPBt4mJ1RiCKs5IoifhRINmZ8x9UceCNVjQPp5M0jVg",
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      const timer = setTimeout(() => {
+        setCResults((prevCResults) => ({
+          ...prevCResults,
+          success: false,
+        }));
+      }, 1500);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [cResults.success]);
   return (
     <div className="container">
       <div className="hero-radial-center relative">
         <div className="absolute center-radial">
           {/* <img src={centerRadial} alt="radial" className="center-radial-img" /> */}
         </div>
-        <div className="left-radial">
-          {/* <img src={leftRadial} alt="radial" className="left-radial-img" /> */}
-        </div>
+        <div className="left-radial">{/* <img src={leftRadial} alt="radial" className="left-radial-img" /> */}</div>
         <div className="absolute left-0 top-0 floating1">
           <img
             src={icon1}
@@ -124,9 +194,14 @@ const Homepage = () => {
           <Working />
         </div>
       </div>
-      <Winners />
+      <Winners data={data} loading={loading} />
       <About />
-      <Contact />
+      <Contact
+        contactUs={contactUs}
+        handleChange={handleChange}
+        cResults={cResults}
+        handleContactUs={handleContactUs}
+      />
       <Footer />
     </div>
   );
