@@ -15,10 +15,11 @@ const LiveStream = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis diam eu mi auctor mollis. Cras
-        iaculis, ligula non pharetra sagittis, neque turpis lacinia lorem
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+        venenatis diam eu mi auctor mollis. Cras iaculis, ligula non pharetra
+        sagittis, neque turpis lacinia lorem
       </p>
-      <div className="mt-[30px] md:mt-[30px] lg:mt-[40px] xl:mt-[50px] 2xl:mt-[60px]">
+      <div className="mt-[30px] md:mt-[30px] lg:mt-[40px] xl:mt-[50px] 2xl:mt-[60px] flex justify-center">
         <iframe
           width="560"
           height="315"

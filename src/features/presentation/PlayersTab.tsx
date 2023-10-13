@@ -114,37 +114,37 @@ const PlayersTab = ({ players, winners }: any) => {
                         <div className="flex items-center custom-opt-input-wrapper">
                           <Input
                             className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            type="number"
+                            // type="number"
                           />
                         </div>
                         <div className="flex items-center custom-opt-input-wrapper">
                           <Input
                             className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            type="number"
+                            // type="number"
                           />
                         </div>
                         <div className="flex items-center custom-opt-input-wrapper">
                           <Input
                             className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            type="number"
+                            // type="number"
                           />
                         </div>
                         <div className="flex items-center custom-opt-input-wrapper">
                           <Input
                             className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            type="number"
+                            // type="number"
                           />
                         </div>
                         <div className="flex items-center custom-opt-input-wrapper">
                           <Input
                             className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            type="number"
+                            // type="number"
                           />
                         </div>
                         <div className="flex items-center custom-opt-input-wrapper">
                           <Input
                             className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            type="number"
+                            // type="number"
                           />
                         </div>
                       </div>

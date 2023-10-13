@@ -2,7 +2,7 @@ import React from "react";
 
 const CurrentPlayerTable = ({ players }: any) => {
   return (
-    <div className="players-table-wrapper mx-auto px-[13px] pt-[0px] pb-[30px] md:pb-[30px] lg:pb-[40px] 2xl:pb-[45px] overflow-auto">
+    <div className="players-table-wrapper mx-auto px-[13px] pt-[0px] pb-[30px] md:pb-[30px] lg:pb-[40px] 2xl:pb-[45px] overflow-auto min-h-[350px] md:min-h-[430px] lg:min-h-[500px] 2xl:min-h-[530px]">
       <div className="players-table-container">
         <table className="w-full border-separate border-spacing-y-3">
           <thead>
