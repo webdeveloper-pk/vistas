@@ -1,0 +1,418 @@
+.modal-input-label {
+  color: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input {
+  border: 1px solid transparent;
+  background: transparent;
+  height: 62px;
+  color: white;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  > .ant-input:first-child,
+:where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input-group-addon:first-child {
+  border-start-end-radius: 4px;
+  border-end-end-radius: 4px;
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input-group-addon:first-child {
+  border-inline-end: 1 !important;
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input-group-addon {
+  color: #76c9ed;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 20px;
+  border-radius: 6px;
+  border-radius: 11px;
+  border: 1px solid rgba(54, 54, 54, 0.23);
+  background: rgba(217, 217, 217, 0.03);
+  width: 62px;
+  height: 62px;
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input:hover {
+  border-right: 1px solid rgba(54, 54, 54, 0.23);
+  box-shadow: 0 0 2px rgba(54, 54, 54, 0.23);
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input:focus {
+  border-right: 1px solid rgba(54, 54, 54, 0.23);
+  box-shadow: 0 0 2px rgba(54, 54, 54, 0.23);
+}
+
+.modal-custom-input-wrapper
+  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+  .ant-input:active {
+  border-right: 1px solid rgba(54, 54, 54, 0.23);
+  box-shadow: 0 0 2px rgba(54, 54, 54, 0.23);
+}
+
+.modal-custom-input {
+  border-radius: 11px;
+  border: 1px solid rgba(54, 54, 54, 0.23);
+  background: rgba(217, 217, 217, 0.03);
+  height: 62px;
+}
+
+.active-border {
+  border: 1px solid rgba(255, 201, 5, 0.7);
+}
+
+.not-active-border {
+  border: 1px solid rgba(205, 205, 205, 0.23);
+}
+
+.radio-text {
+  color: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.modal-custom-simple-input-wrapper {
+  height: 62px;
+  border-radius: 11px;
+  border: 1px solid rgba(54, 54, 54, 0.23);
+  background: rgba(217, 217, 217, 0.03);
+  padding-left: 20px;
+  padding-right: 18px;
+}
+
+.input-set-text {
+  color: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-custom-simple-input {
+  background: transparent;
+  border: none;
+  padding-left: 2px;
+}
+
+.modal-custom-simple-input:hover {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+  outline: none;
+}
+
+.modal-custom-simple-input:focus {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+  outline: none;
+}
+
+.modal-custom-simple-input:active {
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 2px transparent !important;
+  outline: none;
+}
+
+.modal-custom-simple-input {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-custom-simple-input::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-add-more-btn {
+  width: 137px;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      rgba(150, 150, 150, 0.23) 50%,
+      transparent 50%
+    ),
+    linear-gradient(90deg, rgba(150, 150, 150, 0.23) 50%, transparent 50%),
+    linear-gradient(0deg, rgba(150, 150, 150, 0.23) 50%, transparent 50%),
+    linear-gradient(0deg, rgba(150, 150, 150, 0.23) 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
+  background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
+  animation: border-dance 25s infinite linear;
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
+  }
+  100% {
+    background-position: 100% 0px, 0px 100%, 0px 0px, 100% 100%;
+  }
+}
+
+.modal-submit-btn {
+  border-radius: 11px;
+  border: 0.7px solid rgba(217, 217, 217, 0.03);
+  background: linear-gradient(124deg, #ffc905 -2.3%, #f16820 102.79%);
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.modal-add-btn {
+  color: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  width: 137px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  background: rgba(217, 217, 217, 0.03);
+}
+
+.radio-wrapper {
+  height: 76px;
+  border-radius: 11px;
+  background: rgba(217, 217, 217, 0.03);
+  display: flex;
+  align-items: center;
+  padding-left: 22px;
+  width: 100%;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-radio-wrapper
+  .ant-radio-inner {
+  border-color: rgba(217, 217, 217, 0.38) !important;
+  background-color: transparent !important;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-radio-wrapper
+  .ant-radio-checked
+  .ant-radio-inner {
+  border-color: #ffc905 !important;
+  background-color: transparent !important;
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-radio-wrapper
+  .ant-radio-inner::after {
+  background: linear-gradient(
+    124deg,
+    #ffc905 -2.3%,
+    #f16820 102.79%
+  ) !important;
+}
+
+@media screen and (min-width: 1700px) {
+  .modal-set-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1700px) and (min-width: 1536px) {
+  .modal-set-text {
+    font-size: 13px;
+  }
+  .modal-custom-simple-input::placeholder {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1535px) and (min-width: 1280px) {
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input {
+    font-size: 16px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input-group-addon {
+    font-size: 18px;
+  }
+  .modal-submit-btn {
+    height: 70px;
+  }
+  .modal-set-text {
+    font-size: 13px;
+  }
+  .modal-custom-simple-input::placeholder {
+    font-size: 14px;
+  }
+  .radio-wrapper {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input {
+    font-size: 16px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input-group-addon {
+    font-size: 18px;
+  }
+  .modal-custom-simple-input {
+    font-size: 16px;
+  }
+  .modal-submit-btn {
+    height: 65px;
+  }
+  .modal-custom-simple-input::placeholder {
+    font-size: 14px;
+  }
+  .radio-wrapper {
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 900px) {
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input {
+    font-size: 15px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input-group-addon {
+    font-size: 17px;
+  }
+  .modal-custom-simple-input {
+    font-size: 15px;
+  }
+  .modal-submit-btn {
+    height: 65px;
+  }
+  .modal-custom-simple-input::placeholder {
+    font-size: 15px;
+  }
+  .radio-wrapper {
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 899px) and (min-width: 768px) {
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input {
+    font-size: 15px;
+  }
+  .modal-custom-simple-input {
+    font-size: 15px;
+  }
+  .modal-submit-btn {
+    height: 65px;
+  }
+  .modal-custom-simple-input::placeholder {
+    font-size: 15px;
+  }
+  .radio-wrapper {
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input-group-addon {
+    font-size: 16px;
+  }
+  .modal-custom-simple-input-wrapper {
+    height: 60px;
+  }
+  .modal-custom-simple-input {
+    font-size: 14px;
+  }
+  .modal-add-btn {
+    height: 60px;
+  }
+  .modal-submit-btn {
+    height: 60px;
+  }
+  .modal-custom-simple-input::placeholder {
+    font-size: 14px;
+  }
+  .radio-wrapper {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input {
+    font-size: 14px;
+  }
+  .modal-custom-input-wrapper
+    :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
+    .ant-input-group-addon {
+    font-size: 16px;
+  }
+  .modal-custom-simple-input {
+    font-size: 14px;
+  }
+  .modal-add-btn {
+    height: 60px;
+  }
+  .modal-submit-btn {
+    height: 60px;
+  }
+  .modal-custom-simple-input::placeholder {
+    font-size: 14px;
+  }
+  .radio-wrapper {
+    height: 60px;
+  }
+}
