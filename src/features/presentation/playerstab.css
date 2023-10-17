@@ -5,9 +5,8 @@
   font-weight: 400;
   line-height: normal;
 }
-:where(.css-dev-only-do-not-override-pr0fja).ant-input-group .ant-input {
-  border: 1px solid transparent !important;
-  background: transparent !important;
+
+.modal-custom-input-wrapper-new {
   height: 62px !important;
   color: white !important;
   font-family: "Poppins" !important;
@@ -15,62 +14,43 @@
   font-style: normal !important;
   font-weight: 400 !important;
   line-height: normal !important;
-}
-
-:where(.css-dev-only-do-not-override-pr0fja).ant-input-group
-  .ant-input::placeholder {
-  color: rgba(255, 255, 255, 0.48) !important;
-}
-
-:where(.css-dev-only-do-not-override-pr0fja).ant-input-group
-  > .ant-input:first-child,
-:where(.css-dev-only-do-not-override-pr0fja).ant-input-group
-  .ant-input-group-addon:first-child {
-  border-start-end-radius: 4px !important;
-  border-end-end-radius: 4px !important;
-}
-
-:where(.css-dev-only-do-not-override-pr0fja).ant-input-group
-  .ant-input-group-addon:first-child {
-  border-inline-end: 1 !important;
-}
-
-:where(.css-dev-only-do-not-override-pr0fja).ant-input-group
-  .ant-input-group-addon {
-  color: #76c9ed !important;
-  font-family: "Poppins" !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  line-height: normal !important;
-  font-size: 20px !important;
-  border-radius: 6px !important;
   border-radius: 11px !important;
   border: 1px solid rgba(54, 54, 54, 0.23) !important;
   background: rgba(217, 217, 217, 0.03) !important;
-  width: 62px !important;
-  height: 62px !important;
 }
 
-:where(.css-dev-only-do-not-override-pr0fja).ant-input-group .ant-input:hover {
-  border-right: 1px solid rgba(54, 54, 54, 0.23) !important;
-  box-shadow: 0 0 2px rgba(54, 54, 54, 0.23) !important;
-}
-
-:where(.css-dev-only-do-not-override-pr0fja).ant-input-group .ant-input:focus {
-  border-right: 1px solid rgba(54, 54, 54, 0.23) !important;
-  box-shadow: 0 0 2px rgba(54, 54, 54, 0.23) !important;
-}
-
-:where(.css-dev-only-do-not-override-pr0fja).ant-input-group .ant-input:active {
-  border-right: 1px solid rgba(54, 54, 54, 0.23) !important;
-  box-shadow: 0 0 2px rgba(54, 54, 54, 0.23) !important;
-}
-
-.modal-custom-input {
-  border-radius: 11px !important;
-  border: 1px solid rgba(54, 54, 54, 0.23) !important;
-  background: rgba(217, 217, 217, 0.03) !important;
+.modal-transection-btn {
+  width: 62px;
   height: 62px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  border-right: 1px solid rgba(54, 54, 54, 0.23);
+  background: rgba(217, 217, 217, 0.03);
+  color: #76c9ed;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.modal-custom-input-new {
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 18px;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none;
+  color: white;
+}
+
+.modal-custom-input-new::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .active-border {
@@ -143,7 +123,7 @@
 .modal-custom-simple-input::placeholder {
   color: rgba(255, 255, 255, 0.48);
   font-family: "Poppins";
-  font-size: 15px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -209,13 +189,13 @@
 }
 
 .radio-wrapper {
-  height: 76px !important;
-  border-radius: 11px !important;
-  background: rgba(217, 217, 217, 0.03) !important;
-  display: flex !important;
-  align-items: center !important;
-  padding-left: 22px !important;
-  width: 100% !important;
+  height: 76px;
+  border-radius: 11px;
+  background: rgba(217, 217, 217, 0.03);
+  display: flex;
+  align-items: center;
+  padding-left: 22px;
+  width: 100%;
 }
 
 :where(.css-dev-only-do-not-override-pr0fja).ant-radio-wrapper
@@ -244,6 +224,9 @@
   .modal-set-text {
     font-size: 14px;
   }
+  .modal-custom-input-new {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 1700px) and (min-width: 1536px) {
@@ -253,16 +236,12 @@
   .modal-custom-simple-input::placeholder {
     font-size: 15px;
   }
+  .modal-custom-input-new {
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-width: 1535px) and (min-width: 1280px) {
-  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group .ant-input {
-    font-size: 16px !important;
-  }
-  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
-    .ant-input-group-addon {
-    font-size: 18px !important;
-  }
   .modal-submit-btn {
     height: 70px;
   }
@@ -275,16 +254,12 @@
   .radio-wrapper {
     height: 70px;
   }
+  .modal-custom-input-new {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 1279px) and (min-width: 1024px) {
-  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group .ant-input {
-    font-size: 16px !important;
-  }
-  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
-    .ant-input-group-addon {
-    font-size: 18px !important;
-  }
   .modal-custom-simple-input {
     font-size: 16px;
   }
@@ -297,16 +272,12 @@
   .radio-wrapper {
     height: 65px;
   }
+  .modal-custom-input-new {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 900px) {
-  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group .ant-input {
-    font-size: 15px !important;
-  }
-  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
-    .ant-input-group-addon {
-    font-size: 17px !important;
-  }
   .modal-custom-simple-input {
     font-size: 15px;
   }
@@ -318,13 +289,13 @@
   }
   .radio-wrapper {
     height: 65px;
+  }
+  .modal-custom-input-new {
+    font-size: 15px;
   }
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
-  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group .ant-input {
-    font-size: 15px !important;
-  }
   .modal-custom-simple-input {
     font-size: 15px;
   }
@@ -337,13 +308,12 @@
   .radio-wrapper {
     height: 65px;
   }
+  .modal-custom-input-new {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 768px) and (min-width: 426px) {
-  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
-    .ant-input-group-addon {
-    font-size: 16px !important;
-  }
   .modal-custom-simple-input-wrapper {
     height: 60px;
   }
@@ -362,16 +332,12 @@
   .radio-wrapper {
     height: 60px;
   }
+  .modal-custom-input-new {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 425px) {
-  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group .ant-input {
-    font-size: 14px !important;
-  }
-  :where(.css-dev-only-do-not-override-pr0fja).ant-input-group
-    .ant-input-group-addon {
-    font-size: 16px !important;
-  }
   .modal-custom-simple-input {
     font-size: 14px;
   }
@@ -386,5 +352,8 @@
   }
   .radio-wrapper {
     height: 60px;
+  }
+  .modal-custom-input-new {
+    font-size: 14px;
   }
 }

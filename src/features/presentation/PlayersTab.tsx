@@ -261,10 +261,12 @@ const PlayersTab = ({
                       <label className="modal-input-label text-[14px] md:text-[15px] 2xl:text-[16px] ml-[20px] lg:ml-[30px]">
                         Telegram Handle
                       </label>
-                      <div className="modal-custom-input-wrapper mt-[15px] md:mt-[17px]">
-                        <Input
-                          addonBefore="@"
-                          className="modal-custom-input w-full"
+                      <div className="modal-custom-input-wrapper-new mt-[15px] md:mt-[17px] flex items-center">
+                        <button className="modal-transection-btn text-[16px] lg:text-[20px]">
+                          @
+                        </button>
+                        <input
+                          className="modal-custom-input-new w-full"
                           placeholder="Enter Your Telegram Handle"
                           value={entries.telegram_handle}
                           onChange={(e) => {
@@ -274,10 +276,6 @@ const PlayersTab = ({
                             });
                           }}
                           required
-                          style={{
-                            background: "rgba(217, 217, 217, 0.03)",
-                            border: "none",
-                          }}
                         />
                       </div>
                     </div>
@@ -285,10 +283,12 @@ const PlayersTab = ({
                       <label className="modal-input-label text-[14px] md:text-[15px] 2xl:text-[16px] ml-[20px] lg:ml-[30px]">
                         Transaction ID
                       </label>
-                      <div className="modal-custom-input-wrapper mt-[15px] md:mt-[17px]">
-                        <Input
-                          addonBefore="#"
-                          className="modal-custom-input w-full"
+                      <div className="modal-custom-input-wrapper-new mt-[15px] md:mt-[17px] flex items-center">
+                        <button className="modal-transection-btn text-[16px] lg:text-[20px]">
+                          #
+                        </button>
+                        <input
+                          className="modal-custom-input-new w-full"
                           placeholder="Enter Your Transaction Id"
                           value={entries.transaction_id}
                           onChange={(e) => {
@@ -297,7 +297,6 @@ const PlayersTab = ({
                               transaction_id: e.target.value,
                             });
                           }}
-                          required
                         />
                       </div>
                     </div>
@@ -344,14 +343,14 @@ const PlayersTab = ({
                       Number of Sets
                     </label>
                   </div>
-                  <div className="flex flex-wrap xl:flex-nowrap md:flex-row utems-center justify-between gap-x-[20px] xl:gap-[20px] gap-y-[30px] mt-[15px] lg:mt-[17px]">
+                  <div className="flex flex-wrap xl:flex-nowrap md:flex-row utems-center justify-between gap-x-[20px] xl:gap-x-[12px] 2xl:gap-[20px] gap-y-[30px] mt-[15px] lg:mt-[17px]">
                     {sets.map((set: any, index: number) => (
                       <div
                         className="w-full md:w-[48%] lg:w-[30%] xl:w-[16.6%]"
                         key={index}
                       >
                         <div className="w-full flex items-center modal-custom-simple-input-wrapper">
-                          <div className="w-[60px] input-set-text text-[14px] md:text-[15px] lg:text-[14px] 2xl:text-[15px] modal-set-text whitespace-nowrap">
+                          <div className="w-[60px] input-set-text text-[14px] md:text-[15px] lg:text-[14px] 2xl:text-[15px] modal-set-text whitespace-nowrap xl:mt-[2px]">
                             Set {index + 1}:
                           </div>
                           <input
