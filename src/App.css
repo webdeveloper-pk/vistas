@@ -1245,16 +1245,19 @@ header {
 .custom-opt-input:hover {
   border: 1px solid transparent !important;
   box-shadow: 0 0 0 2px transparent !important;
+  outline: none;
 }
 
 .custom-opt-input:focus {
   border: 1px solid transparent !important;
   box-shadow: 0 0 0 2px transparent !important;
+  outline: none;
 }
 
 .custom-opt-input:active {
   border: 1px solid transparent !important;
   box-shadow: 0 0 0 2px transparent !important;
+  outline: none;
 }
 
 .custom-opt-input {
