@@ -274,6 +274,10 @@ const PlayersTab = ({
                             });
                           }}
                           required
+                          style={{
+                            background: "rgba(217, 217, 217, 0.03)",
+                            border: "none",
+                          }}
                         />
                       </div>
                     </div>
