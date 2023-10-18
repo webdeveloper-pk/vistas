@@ -49,7 +49,7 @@ const Navbar = () => {
                   <img
                     src={logo}
                     alt="logo"
-                    className="w-[90px] h-auto md:w-[100px] lg:w-[110px] lg:h-auto xl:w-[120px] 2xl:w-[130px] xl:h-auto"
+                    className="w-[90px] h-auto md:w-[100px] lg:w-[110px] lg:h-auto xl:w-[120px] 2xl:w-[130px] xl:h-auto "
                   />
                 </a>
               </div>

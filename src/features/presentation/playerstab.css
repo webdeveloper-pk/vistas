@@ -198,7 +198,52 @@
   width: 100%;
 }
 
-:where(.css-dev-only-do-not-override-pr0fja).ant-radio-wrapper
+input[type="radio"] {
+  display: none;
+}
+
+.radio-custom-label {
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-custom-label::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid rgba(217, 217, 217, 0.38);
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: border-color 400ms ease;
+}
+
+.radio-custom-label::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(124deg, #ffc905 -2.3%, #f16820 102.79%);
+  border: 1px solid #ffc905;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) scale(0);
+  transition: transform 400ms ease;
+}
+
+input[type="radio"]:checked + .radio-custom-label::before {
+  border-color: #ffc905;
+}
+
+input[type="radio"]:checked + .radio-custom-label::after {
+  transform: translateY(-50%) scale(0.55);
+}
+
+/* :where(.css-dev-only-do-not-override-pr0fja).ant-radio-wrapper
   .ant-radio-inner {
   border-color: rgba(217, 217, 217, 0.38) !important;
   background-color: transparent !important;
@@ -218,7 +263,7 @@
     #ffc905 -2.3%,
     #f16820 102.79%
   ) !important;
-}
+} */
 
 @media screen and (min-width: 1700px) {
   .modal-set-text {
@@ -296,29 +341,11 @@
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
-  .modal-custom-simple-input {
-    font-size: 15px;
-  }
-  .modal-submit-btn {
-    height: 65px;
-  }
-  .modal-custom-simple-input::placeholder {
-    font-size: 15px;
-  }
-  .radio-wrapper {
-    height: 65px;
-  }
-  .modal-custom-input-new {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 768px) and (min-width: 426px) {
   .modal-custom-simple-input-wrapper {
     height: 60px;
   }
   .modal-custom-simple-input {
-    font-size: 14px;
+    font-size: 15px;
   }
   .modal-add-btn {
     height: 60px;
@@ -327,13 +354,73 @@
     height: 60px;
   }
   .modal-custom-simple-input::placeholder {
-    font-size: 14px;
+    font-size: 15px;
   }
   .radio-wrapper {
     height: 60px;
   }
   .modal-custom-input-new {
+    font-size: 15px;
+  }
+  .modal-custom-input-wrapper-new {
+    height: 60px !important;
+  }
+  .modal-transection-btn {
+    width: 60px;
+    height: 60px;
+  }
+  .modal-custom-simple-input-wrapper {
+    height: 60px;
+  }
+  .radio-custom-label::before {
+    width: 18px;
+    height: 18px;
+  }
+  .radio-custom-label::after {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .modal-custom-simple-input-wrapper {
+    height: 55px;
+  }
+  .modal-custom-simple-input {
     font-size: 14px;
+  }
+  .modal-add-btn {
+    height: 55px;
+  }
+  .modal-submit-btn {
+    height: 55px;
+  }
+  .modal-custom-simple-input::placeholder {
+    font-size: 14px;
+  }
+  .radio-wrapper {
+    height: 55px;
+  }
+  .modal-custom-input-new {
+    font-size: 14px;
+  }
+  .modal-custom-input-wrapper-new {
+    height: 55px !important;
+  }
+  .modal-transection-btn {
+    width: 55px;
+    height: 55px;
+  }
+  .modal-custom-simple-input-wrapper {
+    height: 55px;
+  }
+  .radio-custom-label::before {
+    width: 18px;
+    height: 18px;
+  }
+  .radio-custom-label::after {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -342,18 +429,36 @@
     font-size: 14px;
   }
   .modal-add-btn {
-    height: 60px;
+    height: 55px;
   }
   .modal-submit-btn {
-    height: 60px;
+    height: 55px;
   }
   .modal-custom-simple-input::placeholder {
     font-size: 14px;
   }
   .radio-wrapper {
-    height: 60px;
+    height: 55px;
   }
   .modal-custom-input-new {
     font-size: 14px;
+  }
+  .modal-custom-input-wrapper-new {
+    height: 55px !important;
+  }
+  .modal-transection-btn {
+    width: 55px;
+    height: 55px;
+  }
+  .modal-custom-simple-input-wrapper {
+    height: 55px;
+  }
+  .radio-custom-label::before {
+    width: 18px;
+    height: 18px;
+  }
+  .radio-custom-label::after {
+    width: 18px;
+    height: 18px;
   }
 }

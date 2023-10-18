@@ -301,17 +301,15 @@ const PlayersTab = ({
                       </div>
                     </div>
                   </div>
-
-                  <Radio.Group
+                  {/* <Radio.Group
                     onChange={onChange}
                     value={entries.game_type}
                     className="min-w-full mt-[20px] lg:mt-[32px]"
-                    // required
                   >
                     <label className="modal-input-label text-[14px] md:text-[15px] 2xl:text-[16px] ml-[20px] lg:ml-[30px]">
                       Choose Your Game Type
                     </label>
-                    <div className="mt-[15px] lg:mt-[17px] flex flex-col md:flex-row utems-center justify-between gap-x-[40px] xl:gap-[60px] gap-y-[25px]">
+                    <div className="mt-[15px] lg:mt-[17px] flex flex-col md:flex-row items-center justify-between gap-x-[40px] xl:gap-[60px] gap-y-[25px]">
                       {gameTypes?.data.map((gameType: any, index: number) => (
                         <div
                           key={index}
@@ -323,11 +321,6 @@ const PlayersTab = ({
                         >
                           <Radio
                             value={gameType.id}
-                            className={`${
-                              entries.game_type === gameType.id
-                                ? "text-medium-blue font-medium"
-                                : "text-black font-normal"
-                            }`}
                           >
                             <span className="ml-[5px] md:ml-[8px] radio-text text text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px]">
                               {gameType.type_name}
@@ -336,17 +329,57 @@ const PlayersTab = ({
                         </div>
                       ))}
                     </div>
-                  </Radio.Group>
+                  </Radio.Group> */}
 
+                  <div className="mt-[20px] lg:mt-[32px]">
+                    <label className="modal-input-label text-[14px] md:text-[15px] 2xl:text-[16px] ml-[20px] lg:ml-[30px]">
+                      Choose Your Game Type
+                    </label>
+                    <div className="mt-[15px] lg:mt-[17px] flex flex-col md:flex-row items-center justify-between gap-x-[40px] xl:gap-[60px] gap-y-[25px]">
+                      <div
+                        className={`w-[100%] md:w-[50%] radio-wrapper ${
+                          entries.game_type === "gameType.id"
+                            ? "active-border"
+                            : "not-active-border"
+                        }`}
+                      >
+                        <input type="radio" id="Lucky5" name="gametype" />
+                        <label
+                          htmlFor="Lucky5"
+                          className="radio-custom-label ml-[5px] md:ml-[8px] radio-text text text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px]"
+                        >
+                          <div className="ml-[35px] lg:ml-[40px]">Lucky5</div>
+                        </label>
+                      </div>
+                      <div
+                        className={`w-[100%] md:w-[50%] radio-wrapper ${
+                          entries.game_type === "gameType.id"
+                            ? "active-border"
+                            : "not-active-border"
+                        }`}
+                      >
+                        <input type="radio" id="Lucky5Power" name="gametype" />
+                        <label
+                          htmlFor="Lucky5Power"
+                          className="radio-custom-label ml-[5px] md:ml-[8px] radio-text text text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px]"
+                        >
+                          <div className="ml-[35px] lg:ml-[40px]">
+                            Lucky5 + PowerReveal
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  {/* sets */}
                   <div className="mt-[20px] lg:mt-[32px]">
                     <label className="modal-input-label text-[14px] md:text-[15px] 2xl:text-[16px] ml-[20px] lg:ml-[30px]">
                       Number of Sets
                     </label>
                   </div>
-                  <div className="flex flex-wrap xl:flex-nowrap md:flex-row utems-center justify-between gap-x-[20px] xl:gap-x-[12px] 2xl:gap-[20px] gap-y-[30px] mt-[15px] lg:mt-[17px]">
+                  <div className="flex flex-wrap xl:flex-nowrap md:flex-row items-center justify-between gap-x-[20px] xl:gap-x-[12px] 2xl:gap-[20px] gap-y-[30px] mt-[15px] lg:mt-[17px] w-full xl:overflow-auto">
                     {sets.map((set: any, index: number) => (
                       <div
-                        className="w-full md:w-[48%] lg:w-[30%] xl:w-[16.6%]"
+                        className="w-full md:w-[48%] lg:w-[30%] xl:min-w-[160px] xl:max-w-[200px] 2xl:min-w-[170px] 2xl:max-w-[210px]"
                         key={index}
                       >
                         <div className="w-full flex items-center modal-custom-simple-input-wrapper">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/images/footer-logo.png";
+import logo from "../../assets/images/logo.png";
 
 const Footer = () => {
   const location = useLocation();
@@ -18,7 +18,7 @@ const Footer = () => {
                 <img
                   src={logo}
                   alt="logo"
-                  className="w-[90px] h-auto md:w-[100px] lg:w-[110px] lg:h-auto xl:w-[120px] 2xl:w-[130px] xl:h-auto"
+                  className="w-[90px] h-auto md:w-[100px] lg:w-[110px] lg:h-auto xl:w-[120px] 2xl:w-[130px] xl:h-auto  lg:mt-[-10px]"
                 />
               </Link>
             </div>
