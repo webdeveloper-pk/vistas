@@ -25,19 +25,25 @@ import icon8 from "../assets/images/icon8.png";
 import icon9 from "../assets/images/icon9.png";
 import icon10 from "../assets/images/icon10.png";
 import axios from "axios";
+import Faq from "../components/landingPage/Faq";
 
 const Homepage = () => {
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const [contactUs, setContactUs] = React.useState({
-    csrfmiddlewaretoken: "taNAhyzkX7K51g982azXMVPBt4mJ1RiCKs5IoifhRINmZ8x9UceCNVjQPp5M0jVg",
+    csrfmiddlewaretoken:
+      "taNAhyzkX7K51g982azXMVPBt4mJ1RiCKs5IoifhRINmZ8x9UceCNVjQPp5M0jVg",
     name: "",
     email: "",
     subject: "",
     message: "",
   });
 
-  const [cResults, setCResults] = React.useState({ data: [], loading: false, success: false });
+  const [cResults, setCResults] = React.useState({
+    data: [],
+    loading: false,
+    success: false,
+  });
   React.useEffect(() => {
     AOS.init({
       duration: 2500,
@@ -60,9 +66,17 @@ const Homepage = () => {
       formdata.append("subject", contactUs.subject);
       formdata.append("message", contactUs.message);
 
-      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/contact/`, formdata);
+      const response = await axios.post(
+        `${process.env.REACT_APP_BASE_URL}/contact/`,
+        formdata
+      );
       if (response.data) {
-        setCResults({ ...cResults, data: response.data, loading: false, success: true });
+        setCResults({
+          ...cResults,
+          data: response.data,
+          loading: false,
+          success: true,
+        });
       }
     } catch (error) {
       setCResults({ ...cResults, loading: false });
@@ -73,7 +87,9 @@ const Homepage = () => {
     async function fetchWinners() {
       try {
         setLoading(true);
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/winners/`);
+        const response = await axios.get(
+          `${process.env.REACT_APP_BASE_URL}/api/winners/`
+        );
         if (response.data) {
           setData(response.data);
           setLoading(false);
@@ -87,7 +103,8 @@ const Homepage = () => {
   React.useEffect(() => {
     if (cResults.success) {
       setContactUs({
-        csrfmiddlewaretoken: "taNAhyzkX7K51g982azXMVPBt4mJ1RiCKs5IoifhRINmZ8x9UceCNVjQPp5M0jVg",
+        csrfmiddlewaretoken:
+          "taNAhyzkX7K51g982azXMVPBt4mJ1RiCKs5IoifhRINmZ8x9UceCNVjQPp5M0jVg",
         name: "",
         email: "",
         subject: "",
@@ -111,7 +128,9 @@ const Homepage = () => {
         <div className="absolute center-radial">
           {/* <img src={centerRadial} alt="radial" className="center-radial-img" /> */}
         </div>
-        <div className="left-radial">{/* <img src={leftRadial} alt="radial" className="left-radial-img" /> */}</div>
+        <div className="left-radial">
+          {/* <img src={leftRadial} alt="radial" className="left-radial-img" /> */}
+        </div>
         <div className="absolute left-0 top-0 floating1">
           <img
             src={icon1}
@@ -202,6 +221,7 @@ const Homepage = () => {
         cResults={cResults}
         handleContactUs={handleContactUs}
       />
+      <Faq />
       <Footer />
     </div>
   );

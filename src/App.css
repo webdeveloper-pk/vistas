@@ -1278,6 +1278,131 @@ header {
   line-height: normal;
 }
 
+/* faq */
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  border-radius: 11px;
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+}
+
+.ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+  border-radius: 11px;
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+}
+
+.ant-collapse-header {
+  border-radius: 11px;
+  border: 1px solid rgba(54, 54, 54, 0.23) !important;
+  background: rgba(217, 217, 217, 0.03);
+  color: #fff !important;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Poppins" !important;
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: normal;
+  padding: 22px 30px 21px 40px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ant-collapse-content {
+  padding-left: 22px !important;
+  padding-right: 130px !important;
+}
+
+/* .ant-collapse-item > .ant-collapse-header:focus {
+  background: linear-gradient(124deg, #ffc905 -2.3%, #f16820 102.79%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.ant-collapse-item > .ant-collapse-header:focus {
+  position: relative;
+  background: linear-gradient(124deg, #ffc905 -2.3%, #f16820 102.79%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 11px;
+}
+
+.ant-collapse-item > .ant-collapse-header:focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(217, 217, 217, 0.03);
+  z-index: -1;
+  border-radius: 11px;
+}
+
+.ant-collapse-item > .ant-collapse-header:active {
+  background: linear-gradient(124deg, #ffc905 -2.3%, #f16820 102.79%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  border-radius: 11px;
+}
+
+.ant-collapse-item > .ant-collapse-header:active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(217, 217, 217, 0.03);
+  z-index: -1;
+  border-radius: 11px;
+}
+
+.ant-collapse-header {
+  border: 1px solid rgba(54, 54, 54, 0.23);
+}
+
+.ant-collapse-item-active .ant-collapse-header {
+  border: 1px solid rgba(54, 54, 54, 0.23);
+  background: rgba(217, 217, 217, 0.03);
+}
+:where(.css-dev-only-do-not-override-amq5gd).ant-collapse-ghost
+  > .ant-collapse-item
+  > .ant-collapse-content
+  > .ant-collapse-content-box {
+  padding-block: 0px;
+}
+
+:where(.css-dev-only-do-not-override-amq5gd).ant-collapse
+  .ant-collapse-content
+  > .ant-collapse-content-box {
+  padding: 10px 30px 18px 30px;
+}
+
+:where(.css-dev-only-do-not-override-amq5gd).ant-collapse
+  > .ant-collapse-item
+  > .ant-collapse-header {
+  display: flex;
+  align-items: center;
+}
+
+.faq-inner-content {
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 /* media screens */
 
 @media screen and (min-width: 1920px) {
@@ -1476,6 +1601,10 @@ header {
   .winners-table-wrapper table thead tr td:nth-child(3) {
     min-width: 140px;
   }
+  .ant-collapse-content {
+    padding-left: 22px !important;
+    padding-right: 100px !important;
+  }
 }
 
 @media screen and (max-width: 1535px) and (min-width: 1280px) {
@@ -1558,6 +1687,19 @@ header {
   }
   .winners-table-wrapper table thead tr td:nth-child(3) {
     min-width: 140px;
+  }
+  .ant-collapse-header {
+    font-size: 18px !important;
+    padding: 22px 30px 21px 40px !important;
+  }
+  .ant-collapse-content {
+    padding-left: 22px !important;
+    padding-right: 50px !important;
+  }
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
+    .ant-collapse-content
+    > .ant-collapse-content-box {
+    padding: 10px 25px 18px 25px;
   }
 }
 
@@ -1644,6 +1786,19 @@ header {
     width: 100%;
     height: auto;
   }
+  .ant-collapse-header {
+    font-size: 17px !important;
+    padding: 22px 30px 21px 40px !important;
+  }
+  .ant-collapse-content {
+    padding-left: 22px !important;
+    padding-right: 30px !important;
+  }
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
+    .ant-collapse-content
+    > .ant-collapse-content-box {
+    padding: 10px 25px 18px 25px;
+  }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 900px) {
@@ -1717,6 +1872,19 @@ header {
     border-radius: 25px;
     width: 90%;
   }
+  .ant-collapse-header {
+    font-size: 16px !important;
+    padding: 22px 30px 21px 40px !important;
+  }
+  .ant-collapse-content {
+    padding-left: 22px !important;
+    padding-right: 25px !important;
+  }
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
+    .ant-collapse-content
+    > .ant-collapse-content-box {
+    padding: 10px 15px 18px 15px;
+  }
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
@@ -1789,6 +1957,19 @@ header {
     padding: 30px 30px 25px 30px;
     border-radius: 25px;
     width: 90%;
+  }
+  .ant-collapse-header {
+    font-size: 16px !important;
+    padding: 20px 30px 19px 30px !important;
+  }
+  .ant-collapse-content {
+    padding-left: 15px !important;
+    padding-right: 20px !important;
+  }
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
+    .ant-collapse-content
+    > .ant-collapse-content-box {
+    padding: 10px 15px 18px 15px;
   }
 }
 
@@ -1889,6 +2070,19 @@ header {
     padding: 30px 30px 25px 30px;
     border-radius: 25px;
     width: 90%;
+  }
+  .ant-collapse-header {
+    font-size: 16px !important;
+    padding: 20px 25px 19px 25px !important;
+  }
+  .ant-collapse-content {
+    padding-left: 10px !important;
+    padding-right: 15px !important;
+  }
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
+    .ant-collapse-content
+    > .ant-collapse-content-box {
+    padding: 10px 15px 18px 15px;
   }
 }
 
@@ -2033,6 +2227,19 @@ header {
     padding: 20px 15px 20px 15px;
     border-radius: 15px;
     width: 90%;
+  }
+  .ant-collapse-header {
+    font-size: 15px !important;
+    padding: 18px 18px 18px 18px !important;
+  }
+  .ant-collapse-content {
+    padding-left: 5px !important;
+    padding-right: 15px !important;
+  }
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
+    .ant-collapse-content
+    > .ant-collapse-content-box {
+    padding: 10px 15px 18px 15px;
   }
 }
 

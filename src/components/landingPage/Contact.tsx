@@ -1,9 +1,14 @@
 import React from "react";
 import SpinnerGrow from "../common/SpinnerGrow";
 
-const Contact = ({ contactUs, handleChange, cResults, handleContactUs }: any) => {
+const Contact = ({
+  contactUs,
+  handleChange,
+  cResults,
+  handleContactUs,
+}: any) => {
   return (
-    <div className="mx-auto homepage-container px-[15px] md:px-[40px] lg:px-[40px] xl:px-[50px] 2xl:px-[60px] pb-[60px] md:pb-[60px] lg:pb-[70px] xl:pb-[80px] 2xl:pb-[87px]">
+    <div className="mx-auto homepage-container px-[15px] md:px-[40px] lg:px-[40px] xl:px-[50px] 2xl:px-[60px] pb-[30px] md:pb-[30px] lg:pb-[30px] xl:pb-[40px] 2xl:pb-[40px]">
       <h1
         className="section-title text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[32px]"
         data-aos="fade-left"
@@ -16,8 +21,9 @@ const Contact = ({ contactUs, handleChange, cResults, handleContactUs }: any) =>
         data-aos="fade-left"
         data-aos-duration="1000"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis diam eu mi auctor mollis. Cras
-        iaculis, ligula non pharetra sagittis, neque turpis lacinia lorem
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+        venenatis diam eu mi auctor mollis. Cras iaculis, ligula non pharetra
+        sagittis, neque turpis lacinia lorem
       </p>
       <div className="mt-[20px] md:mt-[25px] lg:mt-[30px] xl:mt-[35px] 2xl:mt-[38px]">
         <form
@@ -57,7 +63,11 @@ const Contact = ({ contactUs, handleChange, cResults, handleContactUs }: any) =>
               />
             </div>
           </div>
-          <div className="w-full mt-[15px]" data-aos="zoom-in" data-aos-duration="1500">
+          <div
+            className="w-full mt-[15px]"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <input
               placeholder="Subject"
               type="text"
@@ -68,7 +78,11 @@ const Contact = ({ contactUs, handleChange, cResults, handleContactUs }: any) =>
               required
             />
           </div>
-          <div className="w-full mt-[15px]" data-aos="zoom-in" data-aos-duration="1500">
+          <div
+            className="w-full mt-[15px]"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <textarea
               placeholder="Write here"
               className="w-full landing-textarea"
@@ -78,7 +92,11 @@ const Contact = ({ contactUs, handleChange, cResults, handleContactUs }: any) =>
               required
             />
           </div>
-          <div className="w-full mt-[10px]" data-aos="zoom-in" data-aos-duration="1500">
+          <div
+            className="w-full mt-[10px]"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <button className="contact-btn text-[14px] lg:text-[15px] 2xl:text-[15.5px]">
               <span className="contact-submit">
                 {cResults.loading ? (
