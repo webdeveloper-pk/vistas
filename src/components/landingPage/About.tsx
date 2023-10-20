@@ -10,7 +10,7 @@ const About = () => {
       <h1 className="section-title text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[32px]">
         About Us
       </h1>
-      <p className="mx-auto section-description text-[14px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] mt-[20px] md:mt-[20px] lg:mt-[20px] xl:mt-[20px] 2xl:mt-[23px]">
+      <p className="mx-auto section-description desc-about-us text-[14px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] mt-[20px] md:mt-[20px] lg:mt-[20px] xl:mt-[20px] 2xl:mt-[23px]">
         Step into the captivating world of VISTAS, where we blend cutting-edge technology with the thrill of live
         streaming for an unforgettable experience. You're on the verge of a thrilling crypto jackpot lottery experience.
         We've got games like LUCKYAURA, LUCKY5 plus the POWER-REVEAL combo. As a ticket holder, you're in for a special

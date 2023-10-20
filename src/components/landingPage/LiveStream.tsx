@@ -15,7 +15,7 @@ const LiveStream = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        Experience the heart-pounding excitement as jackpot draws unfold before your eyes.. Our live streaming lets you
+        Experience the heart-pounding excitement as jackpot draws unfold before your eyes. Our live streaming lets you
         become a part of the action, ensuring that every moment is a thrilling adventure.
       </p>
       <div className="mt-[30px] md:mt-[30px] lg:mt-[40px] xl:mt-[50px] 2xl:mt-[60px] flex justify-center">

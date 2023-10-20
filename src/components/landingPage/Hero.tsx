@@ -1,5 +1,6 @@
 import React from "react";
-import hero from "../../assets/images/hero.png";
+// import hero from "../../assets/images/hero.png";
+import hero from "../../assets/images/laptop1.png";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -36,6 +37,7 @@ const Hero = () => {
         data-aos="zoom-in"
         data-aos-duration="1500"
       >
+        {/* <img src={hero} alt="hero" className="w-[90%] md:w-[80%] lg:w-[80%] xl:w-[80%] 2xl:w-[100%]" /> */}
         <img src={hero} alt="hero" className="w-[90%] md:w-[80%] lg:w-[80%] xl:w-[80%] 2xl:w-[100%]" />
       </div>
     </div>

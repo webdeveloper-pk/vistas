@@ -203,7 +203,7 @@ const Faq = () => {
                   our jackpots, puzzles, or the Zigzag Ball Roll games, you
                   receive a number of entries for free. The catch? All the
                   information and instructions for these games will be revealed
-                  during our live streams. "We'll also provide regular updates
+                  during our live streams. We'll also provide regular updates
                   through our social media channels. So, stay tuned and get
                   ready for more incredible challenges and opportunities to win!
                 </div>
