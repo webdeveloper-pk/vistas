@@ -18,8 +18,8 @@ const Hero = () => {
         className="hero-description hero-subtitle-animation my-[20px] md:my-[24px] lg:my-[26px] text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] px-[10px] md:px-0"
         style={{ zIndex: 100, position: "relative" }}
       >
-        Prepare to be enthralled, engage with purpose, and set your sights on extraordinary prizes. Your journey to
-        victory begins here!
+        Prepare to be enthralled, engage with purpose, and set your sights on
+        extraordinary prizes. Your journey to victory begins here!
       </p>
       <Link to="players-tab">
         <button
@@ -38,7 +38,7 @@ const Hero = () => {
         data-aos-duration="1500"
       >
         {/* <img src={hero} alt="hero" className="w-[90%] md:w-[80%] lg:w-[80%] xl:w-[80%] 2xl:w-[100%]" /> */}
-        <img src={hero} alt="hero" className="w-[90%] md:w-[80%] lg:w-[80%] xl:w-[80%] 2xl:w-[100%]" />
+        <img src={hero} alt="hero" className="hero-custom-image" />
       </div>
     </div>
   );
