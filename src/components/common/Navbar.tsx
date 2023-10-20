@@ -189,7 +189,11 @@ const Navbar = () => {
               </div>
             ) : (
               <>
-                <Link to={location.pathname === "/" ? "players-tab" : ""}>
+                <Link
+                  to={
+                    location.pathname !== "/players-tab" ? "/players-tab" : ""
+                  }
+                >
                   <button className="get-started-btn get-started-btn-custom middle-out text-black hover:text-black transition duration-700 ease-in-out delay-100 text-[14px] md:text-[15px] 2xl:text-[16px]">
                     Get Started
                   </button>

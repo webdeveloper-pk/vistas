@@ -38,7 +38,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#contact" className="footer-link">
+                <a href="/#faq" className="footer-link">
                   FAQs
                 </a>
               </li>
