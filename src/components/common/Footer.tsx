@@ -28,14 +28,14 @@ const Footer = () => {
               data-aos-duration={location?.pathname === "/" ? "1000" : ""}
             >
               <li>
-                <a href="#home" className="footer-link">
+                <Link to="/privacy" className="footer-link">
                   Privacy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="footer-link">
+                <Link to="/terms-and-conditions" className="footer-link">
                   Terms & COnditions
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#contact" className="footer-link">

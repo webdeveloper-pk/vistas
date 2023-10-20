@@ -9,16 +9,16 @@ const Hero = () => {
         className="hero-title hero-title-animation text-[24px] md:text-[35px] lg:text-[40px] xl:text-[45px] 2xl:text-[48px] mx-auto px-[20px] md:px-0"
         style={{ zIndex: 100, position: "relative" }}
       >
-        Ready for a
-        <span className="gradient-text mx-3">chance to win big?</span>
-        You're in the right place!
+        READY FOR YOUR
+        <span className="gradient-text mx-3">SHOT AT WINNING BIG? </span>
+        YOU'RE IN THE RIGHT PLACE!
       </h1>
       <p
         className="hero-description hero-subtitle-animation my-[20px] md:my-[24px] lg:my-[26px] text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] px-[10px] md:px-0"
         style={{ zIndex: 100, position: "relative" }}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a felis nec
-        ligula eleifend placerat
+        Prepare to be enthralled, engage with purpose, and set your sights on extraordinary prizes. Your journey to
+        victory begins here!
       </p>
       <Link to="players-tab">
         <button
@@ -36,11 +36,7 @@ const Hero = () => {
         data-aos="zoom-in"
         data-aos-duration="1500"
       >
-        <img
-          src={hero}
-          alt="hero"
-          className="w-[90%] md:w-[80%] lg:w-[80%] xl:w-[80%] 2xl:w-[100%]"
-        />
+        <img src={hero} alt="hero" className="w-[90%] md:w-[80%] lg:w-[80%] xl:w-[80%] 2xl:w-[100%]" />
       </div>
     </div>
   );

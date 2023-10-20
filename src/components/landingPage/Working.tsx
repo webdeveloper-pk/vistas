@@ -29,70 +29,44 @@ const Working = () => {
             <div className="block lg:hidden absolute -left-[20px] md:-left-[30px] top-[438px] md:top-[472px]">
               <img src={line4} alt="line4" className="w-[30px] md:w-[40px]" />
             </div>
-            <div
-              className="w-full lg:w-[33%]"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
+            <div className="w-full lg:w-[33%]" data-aos="fade-right" data-aos-duration="1000">
               <WorkingCard
                 count="01"
-                title="Make A Payment"
-                description="Send payment to our wallet and get yourself In."
+                title="Secure Your Entry"
+                description={`Send your payment to our designated burn wallet address and click "Get Started" to confirm your participation.`}
               />
             </div>
-            <div
-              className="w-full lg:w-[33%]"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
+            <div className="w-full lg:w-[33%]" data-aos="fade-up" data-aos-duration="1000">
               <WorkingCard
                 count="02"
-                title="Get Lucky Number"
-                description="Fill out the form with your details and lucky numbers."
+                title="Enter Your Lucky Numbers"
+                description="Provide your details and enter your preferred lucky numbers in the form."
               />
             </div>
-            <div
-              className="w-full lg:w-[33%]"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-            >
+            <div className="w-full lg:w-[33%]" data-aos="fade-left" data-aos-duration="1000">
               <WorkingCard
                 count="03"
-                title="Get Your Profit"
-                description="Get a chance to win amazing prizes! & Jackpot."
+                title="Discover Your Winning Potential"
+                description="Optimize Your Odds for Exceptional Prizes, Jackpot Included!"
               />
             </div>
           </div>
         </div>
       </div>
       <div className="hidden lg:block lg:ml-[55px] xl:ml-[60px] 2xl:ml-[63px] relative">
-        <img
-          src={line2}
-          alt="line2"
-          className="h-[51px] absolute left-0 lg:top-[-10px] xl:top-[-10px]"
-        />
+        <img src={line2} alt="line2" className="h-[51px] absolute left-0 lg:top-[-10px] xl:top-[-10px]" />
       </div>
       <div className="hidden lg:block lg:mt-[40px] xl:mt-[40px] lg:ml-[55px] xl:ml-[60px]  2xl:ml-[63px]">
         <img src={line1} alt="line1" className="w-[68%]" />
       </div>
       <div className="hidden lg:block relative lg:ml-[35.7%] xl:ml-[36%] 2xl:ml-[35.2%]">
-        <img
-          src={line2}
-          alt="line2"
-          className="h-[51px] absolute left-[20px] top-[-50px]"
-        />
+        <img src={line2} alt="line2" className="h-[51px] absolute left-[20px] top-[-50px]" />
       </div>
       <div className="hidden lg:block relative lg:ml-[68%] xl:ml-[68.5%] 2xl:ml-[68%]">
-        <img
-          src={line2}
-          alt="line2"
-          className="h-[51px] absolute left-[20px] lg:top-[-51px] xl:top-[-50px]"
-        />
+        <img src={line2} alt="line2" className="h-[51px] absolute left-[20px] lg:top-[-51px] xl:top-[-50px]" />
       </div>
     </div>
   );
 };
 
 export default Working;
-
-// transform rotate-90

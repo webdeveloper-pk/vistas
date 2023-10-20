@@ -8,7 +8,7 @@ const PlayersTabContainer = () => {
     telegram: "",
     win_num: "",
   });
-  console.log("search::: ", search);
+  // console.log("search::: ", search);
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const [entries, setEntries] = React.useState({
@@ -17,6 +17,8 @@ const PlayersTabContainer = () => {
     game_type: "",
     added_numbers: "",
   });
+  console.log("entries::: ", entries);
+
   const [gameTypes, setGamesTypes] = React.useState({ loading: false, data: [], success: false });
 
   const [entriesData, setEntriesData] = React.useState({ loading: false, data: [], success: false });
@@ -146,6 +148,7 @@ const PlayersTabContainer = () => {
 
   React.useEffect(() => {
     if (search) {
+      fetchCurrentPlayers();
       fetchWinners();
     }
   }, [search]);

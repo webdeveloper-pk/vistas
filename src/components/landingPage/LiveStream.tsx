@@ -15,12 +15,11 @@ const LiveStream = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-        venenatis diam eu mi auctor mollis. Cras iaculis, ligula non pharetra
-        sagittis, neque turpis lacinia lorem
+        Experience the heart-pounding excitement as jackpot draws unfold before your eyes.. Our live streaming lets you
+        become a part of the action, ensuring that every moment is a thrilling adventure.
       </p>
       <div className="mt-[30px] md:mt-[30px] lg:mt-[40px] xl:mt-[50px] 2xl:mt-[60px] flex justify-center">
-        <iframe
+        {/* <iframe
           width="560"
           height="315"
           src="https://streaming.player.evmux.com/player?liveId=317bddb9-8f69-41be-a3ab-d9d446d8d9c9"
@@ -28,7 +27,17 @@ const LiveStream = () => {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+        ></iframe> */}
+        <iframe
+          width="560"
+          height="315"
+          src="https://streaming.player.evmux.com/player?liveId=63db5b61-c21f-4545-a9b3-2911a0660d1c"
+          title="evmux video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
         ></iframe>
+
         {/* <div className="live-stream-wrapper mx-auto relative">
           <div className="absolute center-position">
             <svg

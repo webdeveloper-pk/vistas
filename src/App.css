@@ -290,6 +290,16 @@ p {
   line-height: normal;
   text-transform: uppercase;
 }
+.section-title-cc {
+  color: #fff;
+  text-align: left;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
 
 .section-description {
   color: #fff;
@@ -363,11 +373,7 @@ header {
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #f19d57 0%,
-    rgba(28, 28, 38, 0) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%, #f19d57 0%, rgba(28, 28, 38, 0) 100%);
   width: 100%;
   height: 100%;
   opacity: 0.12;
@@ -387,11 +393,7 @@ header {
   right: -50%;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(164, 168, 193, 0.55) 0%,
-    rgba(164, 168, 193, 0) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%, rgba(164, 168, 193, 0.55) 0%, rgba(164, 168, 193, 0) 100%);
   filter: blur(106.18489837646484px);
   opacity: 0.3;
 }
@@ -403,11 +405,7 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 1165px;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(164, 168, 193, 0.55) 0%,
-    rgba(164, 168, 193, 0) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%, rgba(164, 168, 193, 0.55) 0%, rgba(164, 168, 193, 0) 100%);
   filter: blur(106.18489837646484px);
   opacity: 0.27;
 }
@@ -418,11 +416,7 @@ header {
   left: 0%;
   width: 1022px;
   height: 1022px;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(164, 168, 193, 0.04) 0%,
-    rgba(164, 168, 193, 0) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%, rgba(164, 168, 193, 0.04) 0%, rgba(164, 168, 193, 0) 100%);
   filter: blur(93.15104675292969px);
   opacity: 0.03;
 }
@@ -433,11 +427,7 @@ header {
   left: 0%;
   width: 100%;
   height: 1022%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(164, 168, 193, 0.04) 0%,
-    rgba(164, 168, 193, 0) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%, rgba(164, 168, 193, 0.04) 0%, rgba(164, 168, 193, 0) 100%);
   filter: blur(93.15104675292969px);
   opacity: 0.03;
 }
@@ -607,11 +597,7 @@ header {
 
 .working-card-inner {
   border: 0.273px solid rgb(175, 179, 206, 0.2);
-  background: linear-gradient(
-    124deg,
-    rgba(175, 179, 206, 0.06) -2.3%,
-    rgba(98, 96, 118, 0.06) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(175, 179, 206, 0.06) -2.3%, rgba(98, 96, 118, 0.06) 102.79%);
   z-index: 100;
 }
 
@@ -650,21 +636,13 @@ header {
 .winners-table-outer-wrapper {
   border-radius: 16px;
   border: 0.3px solid rgb(175, 179, 206, 0.2);
-  background: linear-gradient(
-    124deg,
-    rgba(175, 179, 206, 0.06) -2.3%,
-    rgba(98, 96, 118, 0.06) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(175, 179, 206, 0.06) -2.3%, rgba(98, 96, 118, 0.06) 102.79%);
 }
 
 .winners-players-table-outer-wrapper {
   border-radius: 16px;
   border: 0.3px solid rgb(175, 179, 206, 0.2);
-  background: linear-gradient(
-    124deg,
-    rgba(175, 179, 206, 0.06) -2.3%,
-    rgba(98, 96, 118, 0.06) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(175, 179, 206, 0.06) -2.3%, rgba(98, 96, 118, 0.06) 102.79%);
   width: 100%;
 }
 
@@ -708,56 +686,32 @@ header {
 
 .winners-table-wrapper table tbody tr:nth-child(1) {
   border: 1px solid rgba(54, 54, 54, 0.23);
-  background: linear-gradient(
-    124deg,
-    rgba(255, 201, 5, 0.33) -2.3%,
-    rgba(241, 104, 32, 0.33) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(255, 201, 5, 0.33) -2.3%, rgba(241, 104, 32, 0.33) 102.79%);
 }
 
 .winners-table-wrapper table tbody tr:nth-child(2) {
   border: 1px solid rgba(54, 54, 54, 0.23);
-  background: linear-gradient(
-    124deg,
-    rgba(255, 201, 5, 0.22) -2.3%,
-    rgba(241, 104, 32, 0.22) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(255, 201, 5, 0.22) -2.3%, rgba(241, 104, 32, 0.22) 102.79%);
 }
 
 .winners-table-wrapper table tbody tr:nth-child(3) {
   border: 1px solid rgba(54, 54, 54, 0.23);
-  background: linear-gradient(
-    124deg,
-    rgba(255, 201, 5, 0.11) -2.3%,
-    rgba(241, 104, 32, 0.11) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(255, 201, 5, 0.11) -2.3%, rgba(241, 104, 32, 0.11) 102.79%);
 }
 
 .winners-table-wrapper table tbody tr:nth-child(4) {
   border: 1px solid rgba(54, 54, 54, 0.23);
-  background: linear-gradient(
-    124deg,
-    rgba(255, 201, 5, 0.09) -2.3%,
-    rgba(241, 104, 32, 0.09) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(255, 201, 5, 0.09) -2.3%, rgba(241, 104, 32, 0.09) 102.79%);
 }
 
 .winners-table-wrapper table tbody tr:nth-child(5) {
   border: 1px solid rgba(54, 54, 54, 0.23);
-  background: linear-gradient(
-    124deg,
-    rgba(255, 201, 5, 0.05) -2.3%,
-    rgba(241, 104, 32, 0.05) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(255, 201, 5, 0.05) -2.3%, rgba(241, 104, 32, 0.05) 102.79%);
 }
 
 .winners-table-wrapper table tbody tr:nth-child(6) {
   border: 1px solid rgba(54, 54, 54, 0.23);
-  background: linear-gradient(
-    124deg,
-    rgba(255, 201, 5, 0.03) -2.3%,
-    rgba(241, 104, 32, 0.03) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(255, 201, 5, 0.03) -2.3%, rgba(241, 104, 32, 0.03) 102.79%);
 }
 
 .winners-table-wrapper .winners-number {
@@ -1091,11 +1045,7 @@ header {
 .players-table-wrapper .players-number {
   border-radius: 11.251px;
   border: 0.273px solid rgb(175, 179, 206, 0.1);
-  background: linear-gradient(
-    124deg,
-    rgba(175, 179, 206, 0.06) -2.3%,
-    rgba(98, 96, 118, 0.06) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(175, 179, 206, 0.06) -2.3%, rgba(98, 96, 118, 0.06) 102.79%);
   width: 39.046px;
   height: 39.046px;
   color: #fff;
@@ -1109,11 +1059,7 @@ header {
 .winners-players-header {
   border-radius: 16px;
   border: 0.3px solid rgb(175, 179, 206, 0.2);
-  background: linear-gradient(
-    124deg,
-    rgba(175, 179, 206, 0.06) -2.3%,
-    rgba(98, 96, 118, 0.06) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(175, 179, 206, 0.06) -2.3%, rgba(98, 96, 118, 0.06) 102.79%);
   width: 100%;
   height: 77px;
 }
@@ -1166,11 +1112,7 @@ header {
   height: 44.073px;
   border-radius: 12.714px;
   border: 0.3px solid rgb(175, 179, 206, 0.2);
-  background: linear-gradient(
-    124deg,
-    rgba(175, 179, 206, 0.06) -2.3%,
-    rgba(98, 96, 118, 0.06) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(175, 179, 206, 0.06) -2.3%, rgba(98, 96, 118, 0.06) 102.79%);
   padding-left: 13px;
   padding-right: 13px;
 }
@@ -1178,11 +1120,7 @@ header {
 .custom-opt-input-wrapper {
   border-radius: 12.714px;
   border: 0.3px solid rgb(175, 179, 206, 0.2);
-  background: linear-gradient(
-    124deg,
-    rgba(175, 179, 206, 0.06) -2.3%,
-    rgba(98, 96, 118, 0.06) 102.79%
-  );
+  background: linear-gradient(124deg, rgba(175, 179, 206, 0.06) -2.3%, rgba(98, 96, 118, 0.06) 102.79%);
 }
 
 .custom-simple-input {
@@ -1381,15 +1319,11 @@ header {
   padding-block: 0px;
 }
 
-:where(.css-dev-only-do-not-override-amq5gd).ant-collapse
-  .ant-collapse-content
-  > .ant-collapse-content-box {
+:where(.css-dev-only-do-not-override-amq5gd).ant-collapse .ant-collapse-content > .ant-collapse-content-box {
   padding: 10px 30px 18px 30px;
 }
 
-:where(.css-dev-only-do-not-override-amq5gd).ant-collapse
-  > .ant-collapse-item
-  > .ant-collapse-header {
+:where(.css-dev-only-do-not-override-amq5gd).ant-collapse > .ant-collapse-item > .ant-collapse-header {
   display: flex;
   align-items: center;
 }
@@ -1696,9 +1630,7 @@ header {
     padding-left: 22px !important;
     padding-right: 50px !important;
   }
-  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
-    .ant-collapse-content
-    > .ant-collapse-content-box {
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse .ant-collapse-content > .ant-collapse-content-box {
     padding: 10px 25px 18px 25px;
   }
 }
@@ -1794,9 +1726,7 @@ header {
     padding-left: 22px !important;
     padding-right: 30px !important;
   }
-  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
-    .ant-collapse-content
-    > .ant-collapse-content-box {
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse .ant-collapse-content > .ant-collapse-content-box {
     padding: 10px 25px 18px 25px;
   }
 }
@@ -1880,9 +1810,7 @@ header {
     padding-left: 22px !important;
     padding-right: 25px !important;
   }
-  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
-    .ant-collapse-content
-    > .ant-collapse-content-box {
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse .ant-collapse-content > .ant-collapse-content-box {
     padding: 10px 15px 18px 15px;
   }
 }
@@ -1966,9 +1894,7 @@ header {
     padding-left: 15px !important;
     padding-right: 20px !important;
   }
-  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
-    .ant-collapse-content
-    > .ant-collapse-content-box {
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse .ant-collapse-content > .ant-collapse-content-box {
     padding: 10px 15px 18px 15px;
   }
 }
@@ -2079,9 +2005,7 @@ header {
     padding-left: 10px !important;
     padding-right: 15px !important;
   }
-  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
-    .ant-collapse-content
-    > .ant-collapse-content-box {
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse .ant-collapse-content > .ant-collapse-content-box {
     padding: 10px 15px 18px 15px;
   }
 }
@@ -2236,9 +2160,7 @@ header {
     padding-left: 5px !important;
     padding-right: 15px !important;
   }
-  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse
-    .ant-collapse-content
-    > .ant-collapse-content-box {
+  :where(.css-dev-only-do-not-override-amq5gd).ant-collapse .ant-collapse-content > .ant-collapse-content-box {
     padding: 10px 15px 18px 15px;
   }
 }
@@ -2268,7 +2190,11 @@ header {
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
 }
-
+.noData {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
 @keyframes spin {
   to {
     -webkit-transform: rotate(360deg);
@@ -2282,4 +2208,9 @@ header {
 
 .otp1 input {
   text-align: center;
+}
+
+.section-description-cc {
+  text-align: left !important;
+  width: 100%;
 }
