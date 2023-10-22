@@ -14,7 +14,7 @@ const Footer = () => {
               data-aos={location?.pathname === "/" ? "fade-right" : ""}
               data-aos-duration={location?.pathname === "/" ? "1000" : ""}
             >
-              <Link to="/">
+              <Link to="/" className="relative cursor-pointer">
                 <img
                   src={logo}
                   alt="logo"
@@ -34,10 +34,11 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/terms-and-conditions" className="footer-link">
-                  Terms & COnditions
+                  Terms & Conditions
                 </Link>
               </li>
               <li>
+                {/* <a href="/#faq" className="footer-link"> */}
                 <a href="/#faq" className="footer-link">
                   FAQs
                 </a>

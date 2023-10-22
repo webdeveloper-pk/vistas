@@ -4,6 +4,20 @@ import { Collapse } from "antd";
 const { Panel } = Collapse;
 
 const Faq = () => {
+  React.useEffect(() => {
+    const hash = window.location.hash;
+
+    if (hash) {
+      const targetId = hash.slice(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        setTimeout(() => {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }, 300);
+      }
+    }
+  }, []);
   return (
     <div
       id="faq"
