@@ -262,9 +262,9 @@ const PlayersTab = ({
                         Telegram Handle
                       </label>
                       <div className="modal-custom-input-wrapper-new mt-[15px] md:mt-[17px] flex items-center">
-                        <button className="modal-transection-btn text-[16px] lg:text-[20px]">
+                        <div className="modal-transection-btn text-[16px] lg:text-[20px] flex justify-center items-center">
                           @
-                        </button>
+                        </div>
                         <input
                           className="modal-custom-input-new w-full"
                           placeholder="Enter Your Telegram Handle"
@@ -284,9 +284,9 @@ const PlayersTab = ({
                         Transaction ID
                       </label>
                       <div className="modal-custom-input-wrapper-new mt-[15px] md:mt-[17px] flex items-center">
-                        <button className="modal-transection-btn text-[16px] lg:text-[20px]">
+                        <div className="modal-transection-btn text-[16px] lg:text-[20px] flex justify-center items-center">
                           #
-                        </button>
+                        </div>
                         <input
                           className="modal-custom-input-new w-full"
                           placeholder="Enter Your Transaction Id"

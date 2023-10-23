@@ -1,6 +1,8 @@
 import React from "react";
 import PlayersTab from "../presentation/PlayersTab";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const PlayersTabContainer = () => {
   const [open, setOpen] = React.useState(false);
@@ -17,7 +19,7 @@ const PlayersTabContainer = () => {
     game_type: "",
     added_numbers: "",
   });
-  console.log("entries::: ", entries);
+  // console.log("entries::: ", entries);
 
   const [gameTypes, setGamesTypes] = React.useState({ loading: false, data: [], success: false });
 
@@ -122,6 +124,11 @@ const PlayersTabContainer = () => {
       setCurrentPlayers({ ...currentPlayers, loading: true });
     }
   }
+  const notify = () => {
+    toast.success("Success Notification !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
 
   React.useEffect(() => {
     fetchCurrentPlayers();
@@ -131,6 +138,8 @@ const PlayersTabContainer = () => {
 
   React.useEffect(() => {
     if (entriesData.success) {
+      notify();
+      fetchCurrentPlayers();
       fetchWinners();
       setEntries({
         telegram_handle: "",
@@ -138,6 +147,7 @@ const PlayersTabContainer = () => {
         game_type: "lucky5",
         added_numbers: "",
       });
+      setSets(["", "", "", "", ""])
       setEntriesData((prevCResults) => ({
         ...prevCResults,
         success: false,
@@ -148,30 +158,33 @@ const PlayersTabContainer = () => {
 
   React.useEffect(() => {
     if (search) {
-      fetchCurrentPlayers();
+      // fetchCurrentPlayers();
       fetchWinners();
     }
   }, [search]);
 
   return (
-    <PlayersTab
-      data={data}
-      loading={loading}
-      sets={sets}
-      handleSetChange={handleSetChange}
-      addMoreSet={addMoreSet}
-      entries={entries}
-      setEntries={setEntries}
-      entriesData={entriesData}
-      handleEntriesSubmit={handleEntriesSubmit}
-      gameTypes={gameTypes}
-      open={open}
-      setOpen={setOpen}
-      currentPlayers={currentPlayers}
-      search={search}
-      setSearch={setSearch}
-      handleInputChange={handleInputChange}
-    />
+    <>
+      <ToastContainer />
+      <PlayersTab
+        data={data}
+        loading={loading}
+        sets={sets}
+        handleSetChange={handleSetChange}
+        addMoreSet={addMoreSet}
+        entries={entries}
+        setEntries={setEntries}
+        entriesData={entriesData}
+        handleEntriesSubmit={handleEntriesSubmit}
+        gameTypes={gameTypes}
+        open={open}
+        setOpen={setOpen}
+        currentPlayers={currentPlayers}
+        search={search}
+        setSearch={setSearch}
+        handleInputChange={handleInputChange}
+      />
+    </>
   );
 };
 

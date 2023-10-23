@@ -2367,3 +2367,8 @@ header {
 .desc-about-us {
   text-align: justify;
 }
+
+
+.Toastify__toast-container{
+  z-index: 100000 !important;
+}
