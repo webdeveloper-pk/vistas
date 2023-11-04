@@ -119,7 +119,7 @@ const WinnersTable = ({ data, loading }: any) => {
                   })
                 ) : (
                   <div className="loading-wrapper text-[14px] lg:text-[16px] 2xl:text-[19px] winners-table-text whitespace-nowrap">
-                    <p className="noData">We do not have a winners yet</p>
+                    <p className="noData">We do not have winners yet.</p>
                   </div>
                 )}
               </>
