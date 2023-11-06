@@ -721,6 +721,10 @@ header {
   padding-right: 10px;
 }
 
+.noData-tr-custom {
+  background: transparent !important;
+}
+
 .winners-table-wrapper table tbody tr:nth-child(1) {
   border: 1px solid rgba(54, 54, 54, 0.23);
   background: linear-gradient(
@@ -2368,7 +2372,30 @@ header {
   text-align: justify;
 }
 
-
-.Toastify__toast-container{
+.Toastify__toast-container {
   z-index: 100000 !important;
+}
+
+@media screen and (max-width: 534px) {
+  .working-line-1 {
+    height: 402px;
+  }
+  .working-line-3 {
+    top: 260px;
+  }
+  .working-line-4 {
+    top: 452px;
+  }
+}
+
+@media screen and (min-width: 535px) and (max-width: 767px) {
+  .working-line-1 {
+    height: 385px;
+  }
+  .working-line-3 {
+    top: 245px;
+  }
+  .working-line-4 {
+    top: 436px;
+  }
 }

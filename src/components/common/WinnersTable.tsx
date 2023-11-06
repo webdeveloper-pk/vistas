@@ -118,9 +118,13 @@ const WinnersTable = ({ data, loading }: any) => {
                     );
                   })
                 ) : (
-                  <div className="loading-wrapper text-[14px] lg:text-[16px] 2xl:text-[19px] winners-table-text whitespace-nowrap">
-                    <p className="noData">We do not have winners yet.</p>
-                  </div>
+                  <>
+                    <tr className="noData-tr-custom w-full text-[14px] lg:text-[16px] 2xl:text-[19px] winners-table-text whitespace-nowrap bg-[#1F1F29]">
+                      <td colSpan={4}>
+                        <p className="noData">We do not have winners yet.</p>
+                      </td>
+                    </tr>
+                  </>
                 )}
               </>
             )}
