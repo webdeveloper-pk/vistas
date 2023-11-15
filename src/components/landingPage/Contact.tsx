@@ -82,9 +82,10 @@ const Contact = ({ contactUs, handleChange, cResults, handleContactUs }: any) =>
             <button className="contact-btn text-[14px] lg:text-[15px] 2xl:text-[15.5px]">
               <span className="contact-submit">
                 {cResults.loading ? (
-                  <>
-                    <SpinnerGrow /> Loading...
-                  </>
+                  <div className="flex justify-center items-center gap-1">
+                    <SpinnerGrow />
+                    Loading...
+                  </div>
                 ) : (
                   <>{cResults.success ? "Done" : "SUBMIT YOUR REQUEST"}</>
                 )}

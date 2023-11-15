@@ -18,9 +18,10 @@ const Hero = () => {
         className="hero-description hero-subtitle-animation my-[20px] md:my-[24px] lg:my-[26px] text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] px-[10px] md:px-0"
         style={{ zIndex: 100, position: "relative" }}
       >
-        Prepare to be enthralled, engage with purpose, and set your sights on
-        extraordinary prizes. Your journey to victory begins here!
+        Prepare to be enthralled, engage with purpose, and set your sights on extraordinary prizes. Your journey to
+        victory begins here!
       </p>
+      {/* // <div className="cc">Contract address: 0xe018ab5fd61fdcf376ee5e12fc81702e0e609e31</div> */}
       <Link to="players-tab">
         <button
           className="get-started-btn-hero middle-out text-black hover:text-black transition duration-700 ease-in-out delay-100 text-[14px] md:text-[15px] 2xl:text-[16px]"

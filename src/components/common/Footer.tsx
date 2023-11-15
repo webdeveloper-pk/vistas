@@ -50,7 +50,7 @@ const Footer = () => {
             data-aos={location?.pathname === "/" ? "fade-left" : ""}
             data-aos-duration={location?.pathname === "/" ? "1000" : ""}
           >
-            <a href="#!">
+            <a href="https://t.me/vistaslounge" target="_blank" rel="noreferrer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"

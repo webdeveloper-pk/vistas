@@ -25,6 +25,7 @@ const PlayersTab = ({
   handleInputChange,
   search,
   setSearch,
+  generateRandomNumbers,
 }: any) => {
   const onChange = (e: any) => {
     setEntries({ ...entries, game_type: e });
@@ -399,36 +400,17 @@ const PlayersTab = ({
                         </div>
                       </div>
                     ))}
-                    {/* <div className="w-full md:w-[48%] lg:w-[30%] xl:w-[16.6%]">
-                      <div className="w-full flex items-center modal-custom-simple-input-wrapper">
-                        <div className="w-[60px] input-set-text text-[14px] md:text-[15px] 2xl:text-[16px]">Set 1:</div>
-                        <Input className=" w-full modal-custom-simple-input" placeholder="Enter here" />
+                    <div className="w-full  md:w-[48%] lg:w-[30%] xl:w-[16.6%] flex justify-center md:justify-start">
+                      <div className="modal-add-more-btn rounded-[11px]">
+                        <button
+                          type="button"
+                          className="modal-add-btn text-[14px] md:text-[15px] 2xl:text-[16px] rounded-[11px]"
+                          onClick={generateRandomNumbers}
+                        >
+                          Generate
+                        </button>
                       </div>
                     </div>
-                    <div className="w-full  md:w-[48%] lg:w-[30%] xl:w-[16.6%]">
-                      <div className="w-full flex items-center modal-custom-simple-input-wrapper">
-                        <div className="w-[60px] input-set-text text-[14px] md:text-[15px] 2xl:text-[16px]">Set 1:</div>
-                        <Input className=" w-full modal-custom-simple-input" placeholder="Enter here" />
-                      </div>
-                    </div>
-                    <div className="w-full  md:w-[48%] lg:w-[30%] xl:w-[16.6%]">
-                      <div className="w-full flex items-center modal-custom-simple-input-wrapper">
-                        <div className="w-[60px] input-set-text text-[14px] md:text-[15px] 2xl:text-[16px]">Set 1:</div>
-                        <Input className=" w-full modal-custom-simple-input" placeholder="Enter here" />
-                      </div>
-                    </div>
-                    <div className="w-full  md:w-[48%] lg:w-[30%] xl:w-[16.6%]">
-                      <div className="w-full flex items-center modal-custom-simple-input-wrapper">
-                        <div className="w-[60px] input-set-text text-[14px] md:text-[15px] 2xl:text-[16px]">Set 1:</div>
-                        <Input className=" w-full modal-custom-simple-input" placeholder="Enter here" />
-                      </div>
-                    </div>
-                    <div className="w-full  md:w-[48%] lg:w-[30%] xl:w-[16.6%]">
-                      <div className="w-full flex items-center modal-custom-simple-input-wrapper">
-                        <div className="w-[60px] input-set-text text-[14px] md:text-[15px] 2xl:text-[16px]">Set 1:</div>
-                        <Input className=" w-full modal-custom-simple-input" placeholder="Enter here" />
-                      </div>
-                    </div> */}
                     <div className="w-full  md:w-[48%] lg:w-[30%] xl:w-[16.6%] flex justify-center md:justify-start">
                       <div className="modal-add-more-btn rounded-[11px]">
                         <button

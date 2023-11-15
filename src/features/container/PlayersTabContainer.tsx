@@ -19,12 +19,12 @@ const PlayersTabContainer = () => {
     game_type: "",
     added_numbers: "",
   });
-  // console.log("entries::: ", entries);
+  console.log("entries::: ", entries);
 
   const [gameTypes, setGamesTypes] = React.useState({ loading: false, data: [], success: false });
 
   const [entriesData, setEntriesData] = React.useState({ loading: false, data: [], success: false });
-  const [sets, setSets] = React.useState(["", "", "", "", ""]);
+  const [sets, setSets] = React.useState<Array<string | number[]>>(["", "", "", "", ""]);
   const [currentPlayers, setCurrentPlayers] = React.useState({ loading: false, data: [], success: false });
 
   const handleInputChange = (e: any, index: number) => {
@@ -50,6 +50,25 @@ const PlayersTabContainer = () => {
 
   const addMoreSet = () => {
     setSets([...sets, ""]);
+  };
+
+  const generateRandomNumbers = () => {
+    const randomNumbers = sets.map(() => {
+      const randomNumber1 = Math.floor(Math.random() * 100);
+      return [randomNumber1];
+    });
+    setSets(randomNumbers);
+    const addedNumbers = randomNumbers
+      .map((set) => {
+        if (Array.isArray(set)) {
+          return set.join(",");
+        } else {
+          return "";
+        }
+      })
+      .filter((set) => set !== "")
+      .join(",");
+    setEntries({ ...entries, added_numbers: addedNumbers });
   };
 
   const handleEntriesSubmit = async () => {
@@ -147,7 +166,7 @@ const PlayersTabContainer = () => {
         game_type: "lucky5",
         added_numbers: "",
       });
-      setSets(["", "", "", "", ""])
+      setSets(["", "", "", "", ""]);
       setEntriesData((prevCResults) => ({
         ...prevCResults,
         success: false,
@@ -158,7 +177,6 @@ const PlayersTabContainer = () => {
 
   React.useEffect(() => {
     if (search) {
-      // fetchCurrentPlayers();
       fetchWinners();
     }
   }, [search]);
@@ -183,6 +201,7 @@ const PlayersTabContainer = () => {
         search={search}
         setSearch={setSearch}
         handleInputChange={handleInputChange}
+        generateRandomNumbers={generateRandomNumbers}
       />
     </>
   );
