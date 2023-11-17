@@ -10,7 +10,8 @@ const PlayersTabContainer = () => {
     telegram: "",
     win_num: "",
   });
-  // console.log("search::: ", search);
+  const [selectedGame, setSelectedGame] = React.useState<any>("");
+  // console.log("selectedGame::: ", selectedGame);
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const [entries, setEntries] = React.useState({
@@ -19,12 +20,12 @@ const PlayersTabContainer = () => {
     game_type: "",
     added_numbers: "",
   });
-  console.log("entries::: ", entries);
 
   const [gameTypes, setGamesTypes] = React.useState({ loading: false, data: [], success: false });
 
   const [entriesData, setEntriesData] = React.useState({ loading: false, data: [], success: false });
-  const [sets, setSets] = React.useState<Array<string | number[]>>(["", "", "", "", ""]);
+  const [sets, setSets] = React.useState<Array<string | number[]>>([""]);
+  // console.log("sets::: ", sets);
   const [currentPlayers, setCurrentPlayers] = React.useState({ loading: false, data: [], success: false });
 
   const handleInputChange = (e: any, index: number) => {
@@ -53,21 +54,13 @@ const PlayersTabContainer = () => {
   };
 
   const generateRandomNumbers = () => {
+    const totalInputNumbers = selectedGame?.total_input_numbers || 0;
     const randomNumbers = sets.map(() => {
-      const randomNumber1 = Math.floor(Math.random() * 100);
-      return [randomNumber1];
+      const numbersInSet = Array.from({ length: totalInputNumbers }, () => Math.floor(Math.random() * 10)); // Generating single-digit numbers for simplicity
+      return numbersInSet.join(""); // Joining the array elements into a single string
     });
     setSets(randomNumbers);
-    const addedNumbers = randomNumbers
-      .map((set) => {
-        if (Array.isArray(set)) {
-          return set.join(",");
-        } else {
-          return "";
-        }
-      })
-      .filter((set) => set !== "")
-      .join(",");
+    const addedNumbers = randomNumbers.filter((set) => set !== "").join(",");
     setEntries({ ...entries, added_numbers: addedNumbers });
   };
 
@@ -202,6 +195,8 @@ const PlayersTabContainer = () => {
         setSearch={setSearch}
         handleInputChange={handleInputChange}
         generateRandomNumbers={generateRandomNumbers}
+        selectedGame={selectedGame}
+        setSelectedGame={setSelectedGame}
       />
     </>
   );

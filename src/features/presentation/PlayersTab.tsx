@@ -26,6 +26,8 @@ const PlayersTab = ({
   search,
   setSearch,
   generateRandomNumbers,
+  selectedGame,
+  setSelectedGame,
 }: any) => {
   const onChange = (e: any) => {
     setEntries({ ...entries, game_type: e });
@@ -115,42 +117,6 @@ const PlayersTab = ({
                             />
                           </div>
                         ))}
-                        {/* <div className="flex items-center custom-opt-input-wrapper">
-                          <Input
-                            className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            // type="number"
-                          />
-                        </div>
-                        <div className="flex items-center custom-opt-input-wrapper">
-                          <Input
-                            className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            // type="number"
-                          />
-                        </div>
-                        <div className="flex items-center custom-opt-input-wrapper">
-                          <Input
-                            className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            // type="number"
-                          />
-                        </div>
-                        <div className="flex items-center custom-opt-input-wrapper">
-                          <Input
-                            className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            // type="number"
-                          />
-                        </div>
-                        <div className="flex items-center custom-opt-input-wrapper">
-                          <Input
-                            className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            // type="number"
-                          />
-                        </div>
-                        <div className="flex items-center custom-opt-input-wrapper">
-                          <Input
-                            className="w-[40px] h-[40px] md:w-[44px] md:h-[44px] custom-opt-input"
-                            // type="number"
-                          />
-                        </div> */}
                       </div>
                       <p className="winners-or text-[15px] md:text-[17px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
                         OR
@@ -323,7 +289,10 @@ const PlayersTab = ({
                             name="gametype"
                             value={gameType.id}
                             checked={entries.game_type === gameType.id}
-                            onChange={() => onChange(gameType.id)}
+                            onChange={() => {
+                              onChange(gameType.id);
+                              setSelectedGame(gameType);
+                            }}
                           />
                           <label
                             htmlFor={gameType.type_name}
@@ -335,53 +304,12 @@ const PlayersTab = ({
                       ))}
                     </div>
                   </div>
-
-                  {/* <div className="mt-[20px] lg:mt-[32px]">
-                    <label className="modal-input-label text-[14px] md:text-[15px] 2xl:text-[16px] ml-[20px] lg:ml-[30px]">
-                      Choose Your Game Type
-                    </label>
-                    <div className="mt-[15px] lg:mt-[17px] flex flex-col md:flex-row items-center justify-between gap-x-[40px] xl:gap-[60px] gap-y-[25px]">
-                      <div
-                        className={`w-[100%] md:w-[50%] radio-wrapper ${
-                          entries.game_type === "gameType.id"
-                            ? "active-border"
-                            : "not-active-border"
-                        }`}
-                      >
-                        <input type="radio" id="Lucky5" name="gametype" />
-                        <label
-                          htmlFor="Lucky5"
-                          className="radio-custom-label ml-[5px] md:ml-[8px] radio-text text text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px]"
-                        >
-                          <div className="ml-[35px] lg:ml-[40px]">Lucky5</div>
-                        </label>
-                      </div>
-                      <div
-                        className={`w-[100%] md:w-[50%] radio-wrapper ${
-                          entries.game_type === "gameType.id"
-                            ? "active-border"
-                            : "not-active-border"
-                        }`}
-                      >
-                        <input type="radio" id="Lucky5Power" name="gametype" />
-                        <label
-                          htmlFor="Lucky5Power"
-                          className="radio-custom-label ml-[5px] md:ml-[8px] radio-text text text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px]"
-                        >
-                          <div className="ml-[35px] lg:ml-[40px]">
-                            Lucky5 + PowerReveal
-                          </div>
-                        </label>
-                      </div>
-                    </div>
-                  </div> */}
-                  {/* sets */}
                   <div className="mt-[20px] lg:mt-[32px]">
                     <label className="modal-input-label text-[14px] md:text-[15px] 2xl:text-[16px] ml-[20px] lg:ml-[30px]">
                       Number of Sets
                     </label>
                   </div>
-                  <div className="flex flex-wrap xl:flex-nowrap md:flex-row items-center justify-between gap-x-[20px] xl:gap-x-[12px] 2xl:gap-[20px] gap-y-[30px] mt-[15px] lg:mt-[17px] w-full xl:overflow-auto">
+                  <div className="flex flex-wrap xl:flex-nowrap md:flex-row items-center justify-start gap-x-[20px] xl:gap-x-[12px] 2xl:gap-[20px] gap-y-[30px] mt-[15px] lg:mt-[17px] w-full xl:overflow-auto">
                     {sets.map((set: any, index: number) => (
                       <div
                         className="w-full md:w-[48%] lg:w-[30%] xl:min-w-[160px] xl:max-w-[200px] 2xl:min-w-[170px] 2xl:max-w-[210px]"
@@ -400,7 +328,7 @@ const PlayersTab = ({
                         </div>
                       </div>
                     ))}
-                    <div className="w-full  md:w-[48%] lg:w-[30%] xl:w-[16.6%] flex justify-center md:justify-start">
+                    {selectedGame!==""?<div className="w-full  md:w-[48%] lg:w-[30%] xl:w-[16.6%] flex justify-center md:justify-start">
                       <div className="modal-add-more-btn rounded-[11px]">
                         <button
                           type="button"
@@ -410,7 +338,8 @@ const PlayersTab = ({
                           Generate
                         </button>
                       </div>
-                    </div>
+                    </div>:null}
+                    
                     <div className="w-full  md:w-[48%] lg:w-[30%] xl:w-[16.6%] flex justify-center md:justify-start">
                       <div className="modal-add-more-btn rounded-[11px]">
                         <button

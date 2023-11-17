@@ -2,7 +2,6 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 const WinnersTable = ({ data, loading }: any) => {
-  console.log("data::: ", data);
   const location = useLocation();
   return (
     <div
@@ -17,9 +16,7 @@ const WinnersTable = ({ data, loading }: any) => {
               <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap">
                 Telegram Handle
               </td>
-              <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap">
-                Prize
-              </td>
+              <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap">Prize</td>
               <td className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap">
                 Game Type
               </td>
@@ -28,13 +25,7 @@ const WinnersTable = ({ data, loading }: any) => {
               </td>
             </tr>
           </thead>
-          <tbody
-            className={
-              loading || data.length === 0
-                ? "h-[200px] md:h-[320px] relative"
-                : ""
-            }
-          >
+          <tbody className={loading || data.length === 0 ? "h-[200px] md:h-[320px] relative" : ""}>
             {loading ? (
               <div className="loading-wrapper">
                 <div className="loading"></div>
@@ -48,70 +39,42 @@ const WinnersTable = ({ data, loading }: any) => {
                         key={index}
                         className="h-[50px] lg:h-[55px] 2xl:h-[57px]"
                         data-aos={location?.pathname === "/" ? "fade-up" : ""}
-                        data-aos-duration={
-                          location?.pathname === "/" ? "1000" : ""
-                        }
+                        data-aos-duration={location?.pathname === "/" ? "1000" : ""}
                       >
                         <td
                           className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap"
-                          data-aos={
-                            location?.pathname === "/" ? "fade-down" : ""
-                          }
-                          data-aos-duration={
-                            location?.pathname === "/" ? "1500" : ""
-                          }
+                          data-aos={location?.pathname === "/" ? "fade-down" : ""}
+                          data-aos-duration={location?.pathname === "/" ? "1500" : ""}
                         >
                           {content?.telegram_handle}
                         </td>
                         <td
                           className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap"
-                          data-aos={
-                            location?.pathname === "/" ? "fade-down" : ""
-                          }
-                          data-aos-duration={
-                            location?.pathname === "/" ? "1500" : ""
-                          }
+                          data-aos={location?.pathname === "/" ? "fade-down" : ""}
+                          data-aos-duration={location?.pathname === "/" ? "1500" : ""}
                         >
                           {content?.event?.price}
                         </td>
                         <td
                           className="text-[14px] lg:text-[15px] 2xl:text-[16px] winners-table-text whitespace-nowrap"
-                          data-aos={
-                            location?.pathname === "/" ? "fade-down" : ""
-                          }
-                          data-aos-duration={
-                            location?.pathname === "/" ? "1500" : ""
-                          }
+                          data-aos={location?.pathname === "/" ? "fade-down" : ""}
+                          data-aos-duration={location?.pathname === "/" ? "1500" : ""}
                         >
                           {content?.game_type?.type_name}
                         </td>
                         <td
                           className="text-[14px] lg:text-[16px] 2xl:text-[19px] winners-table-text whitespace-nowrap"
-                          data-aos={
-                            location?.pathname === "/" ? "fade-down" : ""
-                          }
-                          data-aos-duration={
-                            location?.pathname === "/" ? "1500" : ""
-                          }
+                          data-aos={location?.pathname === "/" ? "fade-down" : ""}
+                          data-aos-duration={location?.pathname === "/" ? "1500" : ""}
                         >
                           <div
                             className="flex items-center gap-x-[10px]"
-                            data-aos={
-                              location?.pathname === "/" ? "fade-down" : ""
-                            }
-                            data-aos-duration={
-                              location?.pathname === "/" ? "1500" : ""
-                            }
+                            data-aos={location?.pathname === "/" ? "fade-down" : ""}
+                            data-aos-duration={location?.pathname === "/" ? "1500" : ""}
                           >
-                            {content?.added_numbers
-                              ?.split(",")
-                              .map((numbers: any) => {
-                                return (
-                                  <div className="winners-number flex items-center justify-center">
-                                    {numbers}
-                                  </div>
-                                );
-                              })}
+                            {content?.added_numbers?.split(",").map((numbers: any) => {
+                              return <div className="winners-number flex items-center justify-center">{numbers}</div>;
+                            })}
                           </div>
                         </td>
                       </tr>

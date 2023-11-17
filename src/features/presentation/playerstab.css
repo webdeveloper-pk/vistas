@@ -130,13 +130,10 @@
 }
 
 .modal-add-more-btn {
-  width: 137px;
+  min-width: 137px;
+  width: 100%;
   height: 100%;
-  background: linear-gradient(
-      90deg,
-      rgba(150, 150, 150, 0.23) 50%,
-      transparent 50%
-    ),
+  background: linear-gradient(90deg, rgba(150, 150, 150, 0.23) 50%, transparent 50%),
     linear-gradient(90deg, rgba(150, 150, 150, 0.23) 50%, transparent 50%),
     linear-gradient(0deg, rgba(150, 150, 150, 0.23) 50%, transparent 50%),
     linear-gradient(0deg, rgba(150, 150, 150, 0.23) 50%, transparent 50%);
@@ -179,7 +176,8 @@
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  width: 137px;
+  min-width: 137px;
+  width: 100%;
   height: 62px;
   display: flex;
   justify-content: center;
