@@ -53,11 +53,21 @@ const PlayersTabContainer = () => {
     setSets([...sets, ""]);
   };
 
+  // const generateRandomNumbers = () => {
+  //   const totalInputNumbers = selectedGame?.total_input_numbers || 0;
+  //   const randomNumbers = sets.map(() => {
+  //     const numbersInSet = Array.from({ length: totalInputNumbers }, () => Math.floor(Math.random() * 10)); // Generating single-digit numbers for simplicity
+  //     return numbersInSet.join(""); // Joining the array elements into a single string
+  //   });
+  //   setSets(randomNumbers);
+  //   const addedNumbers = randomNumbers.filter((set) => set !== "").join(",");
+  //   setEntries({ ...entries, added_numbers: addedNumbers });
+  // };
   const generateRandomNumbers = () => {
     const totalInputNumbers = selectedGame?.total_input_numbers || 0;
     const randomNumbers = sets.map(() => {
-      const numbersInSet = Array.from({ length: totalInputNumbers }, () => Math.floor(Math.random() * 10)); // Generating single-digit numbers for simplicity
-      return numbersInSet.join(""); // Joining the array elements into a single string
+      const numbersInSet = Array.from({ length: totalInputNumbers }, () => Math.floor(Math.random() * 98) + 1); // Generating numbers from 1 to 99
+      return numbersInSet.join("-"); // Joining the array elements with hyphens
     });
     setSets(randomNumbers);
     const addedNumbers = randomNumbers.filter((set) => set !== "").join(",");
@@ -159,7 +169,7 @@ const PlayersTabContainer = () => {
         game_type: "lucky5",
         added_numbers: "",
       });
-      setSets(["", "", "", "", ""]);
+      setSets([""]);
       setEntriesData((prevCResults) => ({
         ...prevCResults,
         success: false,
