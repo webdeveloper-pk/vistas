@@ -33,7 +33,8 @@ const Homepage = () => {
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const [contactUs, setContactUs] = React.useState({
-    csrfmiddlewaretoken: "taNAhyzkX7K51g982azXMVPBt4mJ1RiCKs5IoifhRINmZ8x9UceCNVjQPp5M0jVg",
+    csrfmiddlewaretoken:
+      "taNAhyzkX7K51g982azXMVPBt4mJ1RiCKs5IoifhRINmZ8x9UceCNVjQPp5M0jVg",
     name: "",
     email: "",
     subject: "",
@@ -67,7 +68,10 @@ const Homepage = () => {
       formdata.append("subject", contactUs.subject);
       formdata.append("message", contactUs.message);
 
-      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/contact/`, formdata);
+      const response = await axios.post(
+        `${process.env.REACT_APP_BASE_URL}/contact/`,
+        formdata
+      );
       if (response.data) {
         setCResults({
           ...cResults,
@@ -85,7 +89,9 @@ const Homepage = () => {
     async function fetchWinners() {
       try {
         setLoading(true);
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/winners/`);
+        const response = await axios.get(
+          `${process.env.REACT_APP_BASE_URL}/api/winners/`
+        );
         if (response.data) {
           setData(response.data);
           setLoading(false);
@@ -107,7 +113,8 @@ const Homepage = () => {
   React.useEffect(() => {
     if (cResults.success) {
       setContactUs({
-        csrfmiddlewaretoken: "taNAhyzkX7K51g982azXMVPBt4mJ1RiCKs5IoifhRINmZ8x9UceCNVjQPp5M0jVg",
+        csrfmiddlewaretoken:
+          "taNAhyzkX7K51g982azXMVPBt4mJ1RiCKs5IoifhRINmZ8x9UceCNVjQPp5M0jVg",
         name: "",
         email: "",
         subject: "",
@@ -133,7 +140,9 @@ const Homepage = () => {
         <div className="absolute center-radial">
           {/* <img src={centerRadial} alt="radial" className="center-radial-img" /> */}
         </div>
-        <div className="left-radial">{/* <img src={leftRadial} alt="radial" className="left-radial-img" /> */}</div>
+        <div className="left-radial">
+          {/* <img src={leftRadial} alt="radial" className="left-radial-img" /> */}
+        </div>
         <div className="absolute left-0 top-0 floating1">
           <img
             src={icon1}
